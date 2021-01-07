@@ -2787,11 +2787,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\Client\\Client\\Client.csproj",
+      "projectUniqueName": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\git client\\Client\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\Client\\Client\\Client.csproj",
+      "projectPath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\git client\\Client\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\Client\\Client\\obj\\",
+      "outputPath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\git client\\Client\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",

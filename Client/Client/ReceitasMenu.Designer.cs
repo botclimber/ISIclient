@@ -30,12 +30,12 @@ namespace Client
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.mostrarReceitasList = new System.Windows.Forms.ListBox();
             this.detalhesReceitaBtn = new System.Windows.Forms.Button();
             this.infoTextBox = new System.Windows.Forms.TextBox();
             this.infoLabel = new System.Windows.Forms.Label();
             this.validarBtn = new System.Windows.Forms.Button();
-            this.detalhesReceitaTxtB = new System.Windows.Forms.TextBox();
+            this.mostrarReceitasList = new System.Windows.Forms.ListBox();
+            this.detalhesReceitaList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button1
@@ -48,16 +48,6 @@ namespace Client
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // mostrarReceitasList
-            // 
-            this.mostrarReceitasList.FormattingEnabled = true;
-            this.mostrarReceitasList.ItemHeight = 15;
-            this.mostrarReceitasList.Location = new System.Drawing.Point(300, 39);
-            this.mostrarReceitasList.Name = "mostrarReceitasList";
-            this.mostrarReceitasList.Size = new System.Drawing.Size(483, 379);
-            this.mostrarReceitasList.TabIndex = 1;
-            this.mostrarReceitasList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // detalhesReceitaBtn
             // 
             this.detalhesReceitaBtn.Location = new System.Drawing.Point(34, 119);
@@ -66,6 +56,7 @@ namespace Client
             this.detalhesReceitaBtn.TabIndex = 2;
             this.detalhesReceitaBtn.Text = "Detalhes de Receita";
             this.detalhesReceitaBtn.UseVisualStyleBackColor = true;
+            this.detalhesReceitaBtn.Click += new System.EventHandler(this.detalhesReceitaBtn_Click);
             // 
             // infoTextBox
             // 
@@ -73,6 +64,7 @@ namespace Client
             this.infoTextBox.Name = "infoTextBox";
             this.infoTextBox.Size = new System.Drawing.Size(49, 23);
             this.infoTextBox.TabIndex = 3;
+            this.infoTextBox.Visible = false;
             // 
             // infoLabel
             // 
@@ -92,23 +84,42 @@ namespace Client
             this.validarBtn.TabIndex = 5;
             this.validarBtn.Text = "Validar";
             this.validarBtn.UseVisualStyleBackColor = true;
+            this.validarBtn.Visible = false;
             this.validarBtn.Click += new System.EventHandler(this.validarBtn_Click);
             // 
-            // detalhesReceitaTxtB
+            // mostrarReceitasList
             // 
-            this.detalhesReceitaTxtB.Location = new System.Drawing.Point(396, 40);
-            this.detalhesReceitaTxtB.Multiline = true;
-            this.detalhesReceitaTxtB.Name = "detalhesReceitaTxtB";
-            this.detalhesReceitaTxtB.Size = new System.Drawing.Size(360, 378);
-            this.detalhesReceitaTxtB.TabIndex = 6;
-            this.detalhesReceitaTxtB.Visible = false;
+            this.mostrarReceitasList.FormattingEnabled = true;
+            this.mostrarReceitasList.ItemHeight = 15;
+            this.mostrarReceitasList.Location = new System.Drawing.Point(300, 39);
+            this.mostrarReceitasList.Name = "mostrarReceitasList";
+            this.mostrarReceitasList.Size = new System.Drawing.Size(483, 379);
+            this.mostrarReceitasList.TabIndex = 1;
+            this.mostrarReceitasList.Visible = false;
+            this.mostrarReceitasList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // detalhesReceitaList
+            // 
+            this.detalhesReceitaList.AllowDrop = true;
+            this.detalhesReceitaList.FormattingEnabled = true;
+            this.detalhesReceitaList.HorizontalScrollbar = true;
+            this.detalhesReceitaList.ItemHeight = 15;
+            this.detalhesReceitaList.Location = new System.Drawing.Point(454, 39);
+            this.detalhesReceitaList.MultiColumn = true;
+            this.detalhesReceitaList.Name = "detalhesReceitaList";
+            this.detalhesReceitaList.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.detalhesReceitaList.ScrollAlwaysVisible = true;
+            this.detalhesReceitaList.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.detalhesReceitaList.Size = new System.Drawing.Size(483, 379);
+            this.detalhesReceitaList.TabIndex = 6;
+            this.detalhesReceitaList.Visible = false;
             // 
             // ReceitasMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 639);
-            this.Controls.Add(this.detalhesReceitaTxtB);
+            this.Controls.Add(this.detalhesReceitaList);
             this.Controls.Add(this.validarBtn);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.infoTextBox);
@@ -125,11 +136,11 @@ namespace Client
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox mostrarReceitasList;
         private System.Windows.Forms.Button detalhesReceitaBtn;
         private System.Windows.Forms.TextBox infoTextBox;
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Button validarBtn;
-        private System.Windows.Forms.TextBox detalhesReceitaTxtB;
+        private System.Windows.Forms.ListBox mostrarReceitasList;
+        private System.Windows.Forms.ListBox detalhesReceitaList;
     }
 }

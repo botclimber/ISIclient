@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ktyer1tFJTJ1eijuSE9zxnFqnhqjr01nOfWX4hVon7CN7aTA0ZC9dSriJgIZRfkHcMW4g6w0HFqOxwknr9j0SQ==",
+  "dgSpecHash": "2FnqUbw+rHAxVd+JIxTjV+Nk6up5pwyz2noey6UUaYph7mW38n32/EU47KJao9FJd9uleRQJgdQjBw+6/svM3g==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\Client\\Client\\Client.csproj",
+  "projectFilePath": "D:\\Documentos\\Licenciatura\\IPCA\\3º Ano\\1º Semestre\\Integracao de sistemas de informacao\\Trabalho Prático\\git client\\Client\\Client\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

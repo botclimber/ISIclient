@@ -31,6 +31,15 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            mostrarReceitasList.Visible = true;
+            detalhesReceitaList.Visible = false;
+            infoLabel.Visible = false;
+            infoTextBox.Visible = false;
+            validarBtn.Visible = false;
+            mostrarReceitasList.Items.Clear();
+            detalhesReceitaList.Items.Clear();
+
+
             StringBuilder uri;
 
 
@@ -72,8 +81,13 @@ namespace Client
         {
             //get id from listBox
             int index = mostrarReceitasList.SelectedIndex;
-            detalhesReceitaTxtB.Visible = true;
+            detalhesReceitaList.Visible = true;
+            infoLabel.Visible = true;
+            infoTextBox.Visible = true;
+            validarBtn.Visible = true;
             infoTextBox.Text = tabela.results[index].id.ToString();
+            mostrarReceitasList.Items.Clear();
+            mostrarReceitasList.Visible = false;
         }
 
         private void validarBtn_Click(object sender, EventArgs e)
@@ -103,11 +117,27 @@ namespace Client
 
 
                 RecipeInfo.Root deserialize = JsonSerializer.Deserialize<RecipeInfo.Root>(reader.ReadToEnd());
+                
+                detalhesReceitaList.Items.Add(deserialize.recipe[0].title);
+                detalhesReceitaList.Items.Add(deserialize.recipe[0].instructions);
 
-                //imprimir o objeto todo na textbox
-                detalhesReceitaTxtB.DataBindings.Add("Text", deserialize.recipe[0].ToString(), "SomeProperty");
+                foreach(RecipeInfo.Ingredient x in deserialize.recipe[1].ingredients)
+                {
+                    detalhesReceitaList.Items.Add(x.name);
+                }
 
             }
+        }
+
+        private void detalhesReceitaBtn_Click(object sender, EventArgs e)
+        {
+            detalhesReceitaList.Visible = true;
+            infoLabel.Visible = true;
+            infoTextBox.Visible = true;
+            validarBtn.Visible = true;
+            mostrarReceitasList.Visible = false;
+            mostrarReceitasList.Items.Clear();
+            detalhesReceitaList.Items.Clear();
         }
     }
 }
