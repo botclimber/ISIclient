@@ -73,6 +73,7 @@ namespace Client
             this.ingredientesBtn.TabIndex = 3;
             this.ingredientesBtn.Text = "Ingredientes";
             this.ingredientesBtn.UseVisualStyleBackColor = true;
+            this.ingredientesBtn.Click += new System.EventHandler(this.ingredientesBtn_Click);
             // 
             // cervejasBtn
             // 

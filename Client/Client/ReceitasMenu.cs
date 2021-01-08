@@ -54,6 +54,7 @@ namespace Client
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             //request.ContentType = "application/x-www-form-urlencoded";
             request.Headers.Add("x-access-token", token);
+            request.Method = "GET";
 
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
@@ -66,7 +67,6 @@ namespace Client
 
                 StreamReader reader = new StreamReader(response.GetResponseStream());
 
-                Recipes obj = new Recipes();
 
 
                 Recipes.Root deserialize = JsonSerializer.Deserialize<Recipes.Root>(reader.ReadToEnd());
@@ -122,7 +122,7 @@ namespace Client
             uri.Replace("[FUNCAO]", "recipe_details/" + infoTextBox.Text);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             request.Headers.Add("x-access-token", token);
-
+            request.Method = "GET";
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
             {
@@ -285,12 +285,12 @@ namespace Client
             request.Headers.Add("x-access-token", token);
 
 
-            //newRec.title = titleTB.Text;
+            newRec.title = titleTB.Text;
             //string s = iDIngredTB.Text;
             //newRec.id = Array.ConvertAll(s.Split(','), int.Parse);
             //s = amountTB.Text;
             //newRec.amount = Array.ConvertAll(s.Split(','), int.Parse);
-            newRec.instructions = instrucoesTB.Text;
+            //newRec.instructions = instrucoesTB.Text;
             //newRec.calories = Int32.Parse(caloriasTB.Text);
             //newRec.fiber = Int32.Parse(fiberTB.Text);
             //newRec.protein = Int32.Parse(proteinTB.Text);

@@ -45,5 +45,12 @@ namespace Client
             receitas.Show();
             this.Hide();
         }
+
+        private void ingredientesBtn_Click(object sender, EventArgs e)
+        {
+            IngredientesMenu ingredientes = new IngredientesMenu(this, token, url, user_type);
+            ingredientes.Show();
+            this.Hide();
+        }
     }
 }
