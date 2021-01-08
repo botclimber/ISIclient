@@ -124,7 +124,7 @@ namespace Client
             ///Contrução do request
             uri = new StringBuilder();
             uri.Append(url);
-            uri.Replace("[FUNCAO]", "auth");
+            uri.Replace("[FUNCAO]", "auth/");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
 
             newReg.name = userRegistTextbox.Text;
