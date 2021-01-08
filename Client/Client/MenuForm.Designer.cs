@@ -83,6 +83,7 @@ namespace Client
             this.cervejasBtn.TabIndex = 4;
             this.cervejasBtn.Text = "Cervejas";
             this.cervejasBtn.UseVisualStyleBackColor = true;
+            this.cervejasBtn.Click += new System.EventHandler(this.cervejasBtn_Click);
             // 
             // MenuForm
             // 

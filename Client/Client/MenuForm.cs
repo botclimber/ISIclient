@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Net;
-using System.IO;
-using System.Runtime.Serialization;
 
 namespace Client
 {
@@ -50,6 +42,13 @@ namespace Client
         {
             IngredientesMenu ingredientes = new IngredientesMenu(this, token, url, user_type);
             ingredientes.Show();
+            this.Hide();
+        }
+
+        private void cervejasBtn_Click(object sender, EventArgs e)
+        {
+            CervejaMenu cervejaMenu = new CervejaMenu(this, token, url, user_type);
+            cervejaMenu.Show();
             this.Hide();
         }
     }
