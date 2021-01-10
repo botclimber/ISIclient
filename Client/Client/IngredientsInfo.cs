@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// Autores:    Rui Duarte 15831 | Carlos Silva 17028 | Daniel Silva  17637
+/// Cadeira:    Integração de Sistemas de Informação
+/// Curso:      LESI
+/// Professor:  Luís Ferreira
+/// Ano Létivo: 2020/2021
+/// Cliente da API TP2
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
