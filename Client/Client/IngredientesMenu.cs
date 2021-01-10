@@ -27,14 +27,37 @@ namespace Client
         {
             InitializeComponent();
             saveData(menu_param, chave, url_param, user_type_param);
+            if(user_type=="common")
+            {
+                inserIngredienteBtn.Visible = false;
+                uppIngredienteBTN.Visible = false;
+                eliminarIngredienteBTN.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             mostrarIngredienteList.Items.Clear();
-            detalhesIngredienteList.Items.Clear();
             mostrarIngredienteList.Visible = true;
-            
+
+            infoLabel.Visible = false;
+            infoTextBox.Visible = false;
+            infoTextBox.Clear();
+            insrIngredienteBTN.Visible = false;
+            nomeLB.Visible = false;
+            nomeTB.Visible = false;
+            nomeTB.Clear();
+            tipoLB.Visible = false;
+            tipoTB.Visible = false;
+            tipoTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            detalhesIngredienteList.Visible = false;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
+            validarBtn.Visible = false;
+
 
 
             StringBuilder uri;
@@ -81,7 +104,20 @@ namespace Client
             mostrarIngredienteList.Visible = false;
             infoTextBox.Clear();
             mostrarIngredienteList.Items.Clear();
-            detalhesIngredienteList.Items.Clear();
+
+           insrIngredienteBTN.Visible = false;
+            nomeLB.Visible = false;
+            nomeTB.Visible = false;
+            nomeTB.Clear();
+            tipoLB.Visible = false;
+            tipoTB.Visible = false;
+            tipoTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
+            validarBtn.Visible = true;
         }
 
         private void mostrarIngredienteList_SelectedIndexChanged(object sender, EventArgs e)
@@ -123,13 +159,18 @@ namespace Client
 
 
                 IngredientsInfo.Root deserialize = JsonSerializer.Deserialize<IngredientsInfo.Root>(reader.ReadToEnd());
+                int i = 0;
+                IngredientsInfo.Ingredient aux = deserialize.content[0].ingredient;
+                detalhesIngredienteList.DataSource = aux;
+                //foreach (IngredientsInfo.Content x in deserialize.content)
+                //{
+                //    if (i == 1)
+                //        break;
+                //    detalhesIngredienteList.DataSource = deserialize.content.;
+                //    i++;
+                //}
 
-                foreach (IngredientsInfo.Content x in deserialize.content)
-                {
-                    detalhesIngredienteList.Items.Add(x.ingredient.id);
-                    detalhesIngredienteList.Items.Add(x.ingredient.name);
-                    detalhesIngredienteList.Items.Add(x.ingredient.calories);
-                }
+
 
             }
         }
@@ -180,6 +221,21 @@ namespace Client
         {
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
+            infoTextBox.Clear();
+            insrIngredienteBTN.Visible = false;
+            nomeLB.Visible = true;
+            nomeTB.Visible = true;
+            nomeTB.Clear();
+            tipoLB.Visible = true;
+            tipoTB.Visible = true;
+            tipoTB.Clear();
+            caloriasLB.Visible = true;
+            caloriasTB.Visible = true;
+            caloriasTB.Clear();
+            detalhesIngredienteList.Visible = false;
+            uppBTN.Visible = true;
+            deleteBTN.Visible = false;
+            validarBtn.Visible = false;
         }
 
         private void uppBTN_Click(object sender, EventArgs e)
@@ -199,8 +255,8 @@ namespace Client
             request.Headers.Add("x-access-token", token);
 
 
-            newRec.nome_ingredient = nomeTB.Text;
-            //newRec.calories = Int32.Parse(caloriasTB.Text);
+            //newRec.nome_ingredient = nomeTB.Text;
+            newRec.calories = Int32.Parse(caloriasTB.Text);
            
 
             jsonString = JsonSerializer.Serialize<inserIngrediente>(newRec);
@@ -232,6 +288,26 @@ namespace Client
         {
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
+
+            mostrarIngredienteList.Items.Clear();
+            mostrarIngredienteList.Visible = false;
+            infoTextBox.Clear();
+            insrIngredienteBTN.Visible = false;
+            nomeLB.Visible = false;
+            nomeTB.Visible = false;
+            nomeTB.Clear();
+            tipoLB.Visible = false;
+            tipoTB.Visible = false;
+            tipoTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            detalhesIngredienteList.Visible = false;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
+            validarBtn.Visible = false;
+
+
         }
 
         private void deleteBTN_Click(object sender, EventArgs e)
@@ -263,6 +339,29 @@ namespace Client
         {
             this.Close();
             menu.Show();
+        }
+
+        private void inserIngredienteBtn_Click(object sender, EventArgs e)
+        {
+            infoLabel.Visible = false;
+            infoTextBox.Visible = false;
+            infoTextBox.Clear();
+            insrIngredienteBTN.Visible = true;
+            nomeLB.Visible = true;
+            nomeTB.Visible = true;
+            nomeTB.Clear();
+            tipoLB.Visible = true;
+            tipoTB.Visible = true;
+            tipoTB.Clear();
+            caloriasLB.Visible = true;
+            caloriasTB.Visible = true;
+            caloriasTB.Clear();
+            detalhesIngredienteList.Visible = false;
+            mostrarIngredienteList.Visible = false;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
+            validarBtn.Visible = false;
+
         }
     }
 

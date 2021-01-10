@@ -30,6 +30,7 @@ namespace Client
             this.userRegistLabel.Visible = true;
             this.emailRegistTextbox.Visible = true;
             this.emailRegistTextbox.Clear();
+            this.userRegistTextbox.Clear();
             this.passRegistLabel.Visible = true;
             this.passRegistTextbox.Visible = true;
             this.passRegistTextbox.Clear();
@@ -92,7 +93,6 @@ namespace Client
             {
                 result = rdr.ReadToEnd();
             }
-            MessageBox.Show(result);
             
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -101,6 +101,7 @@ namespace Client
                 }
             else
             {
+                MessageBox.Show("Bem-Vindo!");
                 Recipes.Key deserialize = JsonSerializer.Deserialize<Recipes.Key>(result);
                 MenuForm menu = new MenuForm(deserialize.token, this, url, deserialize.user_type);
                 menu.Show();
@@ -113,6 +114,10 @@ namespace Client
         {
             registo newReg = new registo();
             string jsonString;
+
+
+            if(passRegistTextbox.Text==confirmPassRegistTextbox.Text)
+            { 
 
             StringBuilder uri;
             ///Contrução do request
@@ -146,7 +151,45 @@ namespace Client
             {
                 result = rdr.ReadToEnd();
             }
-            MessageBox.Show(result);
+            if (result=="200\n")
+            {
+                MessageBox.Show("Registado com sucesso!");
+                this.userLabel.Visible = true;
+                this.emailTextbox.Visible = true;
+                this.emailTextbox.Clear();
+                this.passLabel.Visible = true;
+                this.passTextbox.Visible = true;
+                this.passTextbox.Clear();
+                this.loginBtn.Visible = true;
+                this.registarBtn.Visible = true;
+                this.sairBtn.Visible = true;
+                this.Text = "Login";
+                this.userRegistLabel.Visible = false;
+                this.emailRegistTextbox.Visible = false;
+                this.emailRegistTextbox.Clear();
+                this.passRegistLabel.Visible = false;
+                this.passRegistTextbox.Visible = false;
+                this.passRegistTextbox.Clear();
+                this.confirmPassRegistTextbox.Visible = false;
+                this.confirmPassRegistTextbox.Clear();
+                this.confirmPassRegistLabel.Visible = false;
+                this.registarRegistBtn.Visible = false;
+                this.cancelRegistBtn.Visible = false;
+                this.nameRegistLabel.Visible = false;
+                this.userRegistTextbox.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro! Tente de novo!");
+            }
+            }
+            else
+            {
+                MessageBox.Show("As palavras-chaves não coincidem! Tente de novo!");
+                passRegistTextbox.Clear();
+                confirmPassRegistTextbox.Clear();
+            }
+
         }
     }
 

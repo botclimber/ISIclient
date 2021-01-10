@@ -38,3 +38,4 @@ D:\Documentos\Licenciatura\IPCA\3º Ano\1º Semestre\Integracao de sistemas de i
 D:\Documentos\Licenciatura\IPCA\3º Ano\1º Semestre\Integracao de sistemas de informacao\Trabalho Prático\git client\Client\Client\obj\Debug\netcoreapp3.1\Client.genruntimeconfig.cache
 D:\Documentos\Licenciatura\IPCA\3º Ano\1º Semestre\Integracao de sistemas de informacao\Trabalho Prático\git client\Client\Client\obj\Debug\netcoreapp3.1\Client.IngredientesMenu.resources
 D:\Documentos\Licenciatura\IPCA\3º Ano\1º Semestre\Integracao de sistemas de informacao\Trabalho Prático\git client\Client\Client\obj\Debug\netcoreapp3.1\Client.CervejaMenu.resources
+D:\Documentos\Licenciatura\IPCA\3º Ano\1º Semestre\Integracao de sistemas de informacao\Trabalho Prático\git client\Client\Client\obj\Debug\netcoreapp3.1\Client.Properties.Resources.resources

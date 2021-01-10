@@ -29,6 +29,7 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.emailTextbox = new System.Windows.Forms.TextBox();
             this.passTextbox = new System.Windows.Forms.TextBox();
             this.userLabel = new System.Windows.Forms.Label();
@@ -47,177 +48,138 @@ namespace Client
             this.nameRegistLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.userRegistTextbox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // emailTextbox
             // 
-            this.emailTextbox.Location = new System.Drawing.Point(188, 82);
+            resources.ApplyResources(this.emailTextbox, "emailTextbox");
             this.emailTextbox.Name = "emailTextbox";
-            this.emailTextbox.Size = new System.Drawing.Size(183, 23);
-            this.emailTextbox.TabIndex = 0;
             // 
             // passTextbox
             // 
-            this.passTextbox.Location = new System.Drawing.Point(188, 156);
+            resources.ApplyResources(this.passTextbox, "passTextbox");
             this.passTextbox.Name = "passTextbox";
-            this.passTextbox.Size = new System.Drawing.Size(183, 23);
-            this.passTextbox.TabIndex = 1;
             // 
             // userLabel
             // 
-            this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(39, 85);
+            resources.ApplyResources(this.userLabel, "userLabel");
+            this.userLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(39, 15);
-            this.userLabel.TabIndex = 2;
-            this.userLabel.Text = "Email:";
             // 
             // passLabel
             // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(39, 159);
+            resources.ApplyResources(this.passLabel, "passLabel");
+            this.passLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(86, 15);
-            this.passLabel.TabIndex = 3;
-            this.passLabel.Text = "Palavra-Chave:";
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(243, 274);
+            this.loginBtn.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.loginBtn, "loginBtn");
+            this.loginBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(128, 31);
-            this.loginBtn.TabIndex = 4;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // registarBtn
             // 
-            this.registarBtn.Location = new System.Drawing.Point(39, 274);
+            this.registarBtn.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.registarBtn, "registarBtn");
+            this.registarBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.registarBtn.Name = "registarBtn";
-            this.registarBtn.Size = new System.Drawing.Size(128, 31);
-            this.registarBtn.TabIndex = 5;
-            this.registarBtn.Text = "Registar";
-            this.registarBtn.UseVisualStyleBackColor = true;
+            this.registarBtn.UseVisualStyleBackColor = false;
             this.registarBtn.Click += new System.EventHandler(this.registarBtn_Click);
             // 
             // sairBtn
             // 
-            this.sairBtn.Location = new System.Drawing.Point(39, 325);
+            this.sairBtn.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.sairBtn, "sairBtn");
+            this.sairBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.sairBtn.Name = "sairBtn";
-            this.sairBtn.Size = new System.Drawing.Size(332, 31);
-            this.sairBtn.TabIndex = 6;
-            this.sairBtn.Text = "Sair";
-            this.sairBtn.UseVisualStyleBackColor = true;
+            this.sairBtn.UseVisualStyleBackColor = false;
             this.sairBtn.Click += new System.EventHandler(this.sairBtn_Click);
             // 
             // passRegistLabel
             // 
-            this.passRegistLabel.AutoSize = true;
-            this.passRegistLabel.Location = new System.Drawing.Point(39, 159);
+            resources.ApplyResources(this.passRegistLabel, "passRegistLabel");
+            this.passRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.passRegistLabel.Name = "passRegistLabel";
-            this.passRegistLabel.Size = new System.Drawing.Size(86, 15);
-            this.passRegistLabel.TabIndex = 10;
-            this.passRegistLabel.Text = "Palavra-Chave:";
-            this.passRegistLabel.Visible = false;
             // 
             // userRegistLabel
             // 
-            this.userRegistLabel.AutoSize = true;
-            this.userRegistLabel.Location = new System.Drawing.Point(39, 85);
+            resources.ApplyResources(this.userRegistLabel, "userRegistLabel");
+            this.userRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.userRegistLabel.Name = "userRegistLabel";
-            this.userRegistLabel.Size = new System.Drawing.Size(39, 15);
-            this.userRegistLabel.TabIndex = 9;
-            this.userRegistLabel.Text = "Email:";
-            this.userRegistLabel.Visible = false;
             // 
             // passRegistTextbox
             // 
-            this.passRegistTextbox.Location = new System.Drawing.Point(188, 156);
+            resources.ApplyResources(this.passRegistTextbox, "passRegistTextbox");
             this.passRegistTextbox.Name = "passRegistTextbox";
-            this.passRegistTextbox.Size = new System.Drawing.Size(183, 23);
-            this.passRegistTextbox.TabIndex = 8;
-            this.passRegistTextbox.Visible = false;
             // 
             // emailRegistTextbox
             // 
-            this.emailRegistTextbox.Location = new System.Drawing.Point(188, 82);
+            resources.ApplyResources(this.emailRegistTextbox, "emailRegistTextbox");
             this.emailRegistTextbox.Name = "emailRegistTextbox";
-            this.emailRegistTextbox.Size = new System.Drawing.Size(183, 23);
-            this.emailRegistTextbox.TabIndex = 7;
-            this.emailRegistTextbox.Visible = false;
             // 
             // confirmPassRegistLabel
             // 
-            this.confirmPassRegistLabel.AutoSize = true;
-            this.confirmPassRegistLabel.Location = new System.Drawing.Point(39, 226);
+            resources.ApplyResources(this.confirmPassRegistLabel, "confirmPassRegistLabel");
+            this.confirmPassRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.confirmPassRegistLabel.Name = "confirmPassRegistLabel";
-            this.confirmPassRegistLabel.Size = new System.Drawing.Size(143, 15);
-            this.confirmPassRegistLabel.TabIndex = 11;
-            this.confirmPassRegistLabel.Text = "Confirmar Palavra-Chave:";
-            this.confirmPassRegistLabel.Visible = false;
             // 
             // confirmPassRegistTextbox
             // 
-            this.confirmPassRegistTextbox.Location = new System.Drawing.Point(188, 223);
+            resources.ApplyResources(this.confirmPassRegistTextbox, "confirmPassRegistTextbox");
             this.confirmPassRegistTextbox.Name = "confirmPassRegistTextbox";
-            this.confirmPassRegistTextbox.Size = new System.Drawing.Size(183, 23);
-            this.confirmPassRegistTextbox.TabIndex = 12;
-            this.confirmPassRegistTextbox.Visible = false;
             // 
             // registarRegistBtn
             // 
-            this.registarRegistBtn.Location = new System.Drawing.Point(39, 252);
+            this.registarRegistBtn.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.registarRegistBtn, "registarRegistBtn");
+            this.registarRegistBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.registarRegistBtn.Name = "registarRegistBtn";
-            this.registarRegistBtn.Size = new System.Drawing.Size(332, 31);
-            this.registarRegistBtn.TabIndex = 13;
-            this.registarRegistBtn.Text = "Registar";
-            this.registarRegistBtn.UseVisualStyleBackColor = true;
-            this.registarRegistBtn.Visible = false;
+            this.registarRegistBtn.UseVisualStyleBackColor = false;
             this.registarRegistBtn.Click += new System.EventHandler(this.registarRegistBtn_Click);
             // 
             // cancelRegistBtn
             // 
-            this.cancelRegistBtn.Location = new System.Drawing.Point(39, 325);
+            this.cancelRegistBtn.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.cancelRegistBtn, "cancelRegistBtn");
+            this.cancelRegistBtn.ForeColor = System.Drawing.Color.SeaGreen;
             this.cancelRegistBtn.Name = "cancelRegistBtn";
-            this.cancelRegistBtn.Size = new System.Drawing.Size(332, 31);
-            this.cancelRegistBtn.TabIndex = 14;
-            this.cancelRegistBtn.Text = "Cancelar";
-            this.cancelRegistBtn.UseVisualStyleBackColor = true;
-            this.cancelRegistBtn.Visible = false;
+            this.cancelRegistBtn.UseVisualStyleBackColor = false;
             this.cancelRegistBtn.Click += new System.EventHandler(this.cancelRegistBtn_Click);
             // 
             // nameRegistLabel
             // 
-            this.nameRegistLabel.AutoSize = true;
-            this.nameRegistLabel.Location = new System.Drawing.Point(39, 29);
+            resources.ApplyResources(this.nameRegistLabel, "nameRegistLabel");
+            this.nameRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
             this.nameRegistLabel.Name = "nameRegistLabel";
-            this.nameRegistLabel.Size = new System.Drawing.Size(43, 15);
-            this.nameRegistLabel.TabIndex = 15;
-            this.nameRegistLabel.Text = "Nome:";
-            this.nameRegistLabel.Visible = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(-40, -88);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 23);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Visible = false;
             // 
             // userRegistTextbox
             // 
-            this.userRegistTextbox.Location = new System.Drawing.Point(188, 26);
+            resources.ApplyResources(this.userRegistTextbox, "userRegistTextbox");
             this.userRegistTextbox.Name = "userRegistTextbox";
-            this.userRegistTextbox.Size = new System.Drawing.Size(183, 23);
-            this.userRegistTextbox.TabIndex = 17;
-            this.userRegistTextbox.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 387);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userRegistTextbox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nameRegistLabel);
@@ -236,8 +198,9 @@ namespace Client
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.passTextbox);
             this.Controls.Add(this.emailTextbox);
+            this.DoubleBuffered = true;
             this.Name = "LoginForm";
-            this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +226,7 @@ namespace Client
         private System.Windows.Forms.Label nameRegistLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox userRegistTextbox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

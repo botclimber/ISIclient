@@ -15,10 +15,18 @@ namespace Client
             public string created_at { get; set; }
         }
 
+        public class Recipe
+        {
+            public int recipe_id { get; set; }
+            public string title { get; set; }
+            public string description { get; set; }
+            public string image_link { get; set; }
+        }
+
         public class Content
         {
-            public List<object> recipes { get; set; }
             public Ingredient ingredient { get; set; }
+            public List<Recipe> recipes { get; set; }
         }
 
         public class Root

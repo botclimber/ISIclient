@@ -29,9 +29,9 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngredientesMenu));
             this.button1 = new System.Windows.Forms.Button();
             this.mostrarIngredienteList = new System.Windows.Forms.ListBox();
-            this.detalhesIngredienteList = new System.Windows.Forms.ListBox();
             this.detalhesIngredienteBtn = new System.Windows.Forms.Button();
             this.validarBtn = new System.Windows.Forms.Button();
             this.infoLabel = new System.Windows.Forms.Label();
@@ -49,16 +49,23 @@ namespace Client
             this.eliminarIngredienteBTN = new System.Windows.Forms.Button();
             this.deleteBTN = new System.Windows.Forms.Button();
             this.sairBTN = new System.Windows.Forms.Button();
+            this.detalhesIngredienteList = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.detalhesIngredienteList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 23);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.Location = new System.Drawing.Point(32, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 50);
+            this.button1.Size = new System.Drawing.Size(112, 40);
             this.button1.TabIndex = 0;
             this.button1.Text = "Mostrar Ingredientes";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mostrarIngredienteList
@@ -72,49 +79,42 @@ namespace Client
             this.mostrarIngredienteList.Visible = false;
             this.mostrarIngredienteList.SelectedIndexChanged += new System.EventHandler(this.mostrarIngredienteList_SelectedIndexChanged);
             // 
-            // detalhesIngredienteList
-            // 
-            this.detalhesIngredienteList.AllowDrop = true;
-            this.detalhesIngredienteList.FormattingEnabled = true;
-            this.detalhesIngredienteList.HorizontalScrollbar = true;
-            this.detalhesIngredienteList.ItemHeight = 15;
-            this.detalhesIngredienteList.Location = new System.Drawing.Point(487, 23);
-            this.detalhesIngredienteList.MultiColumn = true;
-            this.detalhesIngredienteList.Name = "detalhesIngredienteList";
-            this.detalhesIngredienteList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.detalhesIngredienteList.ScrollAlwaysVisible = true;
-            this.detalhesIngredienteList.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.detalhesIngredienteList.Size = new System.Drawing.Size(483, 379);
-            this.detalhesIngredienteList.TabIndex = 7;
-            this.detalhesIngredienteList.Visible = false;
-            // 
             // detalhesIngredienteBtn
             // 
-            this.detalhesIngredienteBtn.Location = new System.Drawing.Point(12, 108);
+            this.detalhesIngredienteBtn.BackColor = System.Drawing.Color.White;
+            this.detalhesIngredienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.detalhesIngredienteBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.detalhesIngredienteBtn.Location = new System.Drawing.Point(32, 170);
             this.detalhesIngredienteBtn.Name = "detalhesIngredienteBtn";
-            this.detalhesIngredienteBtn.Size = new System.Drawing.Size(143, 50);
+            this.detalhesIngredienteBtn.Size = new System.Drawing.Size(112, 40);
             this.detalhesIngredienteBtn.TabIndex = 8;
             this.detalhesIngredienteBtn.Text = "Detalhes Ingrediente";
-            this.detalhesIngredienteBtn.UseVisualStyleBackColor = true;
+            this.detalhesIngredienteBtn.UseVisualStyleBackColor = false;
             this.detalhesIngredienteBtn.Click += new System.EventHandler(this.detalhesIngredienteBtn_Click);
             // 
             // validarBtn
             // 
+            this.validarBtn.BackColor = System.Drawing.Color.White;
+            this.validarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.validarBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.validarBtn.Location = new System.Drawing.Point(441, 428);
             this.validarBtn.Name = "validarBtn";
-            this.validarBtn.Size = new System.Drawing.Size(64, 23);
+            this.validarBtn.Size = new System.Drawing.Size(112, 40);
             this.validarBtn.TabIndex = 11;
             this.validarBtn.Text = "Validar";
-            this.validarBtn.UseVisualStyleBackColor = true;
+            this.validarBtn.UseVisualStyleBackColor = false;
             this.validarBtn.Visible = false;
             this.validarBtn.Click += new System.EventHandler(this.validarBtn_Click);
             // 
             // infoLabel
             // 
             this.infoLabel.AutoSize = true;
+            this.infoLabel.BackColor = System.Drawing.Color.White;
+            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.infoLabel.Location = new System.Drawing.Point(359, 431);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(21, 15);
+            this.infoLabel.Size = new System.Drawing.Size(26, 17);
             this.infoLabel.TabIndex = 10;
             this.infoLabel.Text = "ID:";
             this.infoLabel.Visible = false;
@@ -122,133 +122,198 @@ namespace Client
             // infoTextBox
             // 
             this.infoTextBox.Location = new System.Drawing.Point(386, 428);
+            this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
-            this.infoTextBox.Size = new System.Drawing.Size(49, 23);
+            this.infoTextBox.Size = new System.Drawing.Size(58, 36);
             this.infoTextBox.TabIndex = 9;
+            this.infoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.infoTextBox.Visible = false;
             // 
             // inserIngredienteBtn
             // 
-            this.inserIngredienteBtn.Location = new System.Drawing.Point(12, 193);
+            this.inserIngredienteBtn.BackColor = System.Drawing.Color.White;
+            this.inserIngredienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.inserIngredienteBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.inserIngredienteBtn.Location = new System.Drawing.Point(32, 237);
             this.inserIngredienteBtn.Name = "inserIngredienteBtn";
-            this.inserIngredienteBtn.Size = new System.Drawing.Size(143, 50);
+            this.inserIngredienteBtn.Size = new System.Drawing.Size(112, 40);
             this.inserIngredienteBtn.TabIndex = 12;
             this.inserIngredienteBtn.Text = "Inserir Ingrediente";
-            this.inserIngredienteBtn.UseVisualStyleBackColor = true;
+            this.inserIngredienteBtn.UseVisualStyleBackColor = false;
+            this.inserIngredienteBtn.Click += new System.EventHandler(this.inserIngredienteBtn_Click);
             // 
             // nomeTB
             // 
-            this.nomeTB.Location = new System.Drawing.Point(1114, 68);
+            this.nomeTB.Location = new System.Drawing.Point(991, 71);
             this.nomeTB.Name = "nomeTB";
-            this.nomeTB.Size = new System.Drawing.Size(99, 23);
+            this.nomeTB.Size = new System.Drawing.Size(192, 23);
             this.nomeTB.TabIndex = 13;
+            this.nomeTB.Visible = false;
             // 
             // tipoTB
             // 
-            this.tipoTB.Location = new System.Drawing.Point(1114, 126);
+            this.tipoTB.Location = new System.Drawing.Point(991, 129);
             this.tipoTB.Name = "tipoTB";
-            this.tipoTB.Size = new System.Drawing.Size(99, 23);
+            this.tipoTB.Size = new System.Drawing.Size(192, 23);
             this.tipoTB.TabIndex = 14;
+            this.tipoTB.Visible = false;
             // 
             // caloriasTB
             // 
-            this.caloriasTB.Location = new System.Drawing.Point(1114, 192);
+            this.caloriasTB.Location = new System.Drawing.Point(991, 195);
             this.caloriasTB.Name = "caloriasTB";
-            this.caloriasTB.Size = new System.Drawing.Size(99, 23);
+            this.caloriasTB.Size = new System.Drawing.Size(192, 23);
             this.caloriasTB.TabIndex = 15;
+            this.caloriasTB.Visible = false;
             // 
             // nomeLB
             // 
             this.nomeLB.AutoSize = true;
-            this.nomeLB.Location = new System.Drawing.Point(1032, 68);
+            this.nomeLB.BackColor = System.Drawing.Color.White;
+            this.nomeLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nomeLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.nomeLB.Location = new System.Drawing.Point(909, 71);
             this.nomeLB.Name = "nomeLB";
-            this.nomeLB.Size = new System.Drawing.Size(40, 15);
+            this.nomeLB.Size = new System.Drawing.Size(57, 21);
             this.nomeLB.TabIndex = 16;
             this.nomeLB.Text = "Nome";
+            this.nomeLB.Visible = false;
             // 
             // tipoLB
             // 
             this.tipoLB.AutoSize = true;
-            this.tipoLB.Location = new System.Drawing.Point(1032, 131);
+            this.tipoLB.BackColor = System.Drawing.Color.White;
+            this.tipoLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tipoLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.tipoLB.Location = new System.Drawing.Point(909, 134);
             this.tipoLB.Name = "tipoLB";
-            this.tipoLB.Size = new System.Drawing.Size(33, 15);
+            this.tipoLB.Size = new System.Drawing.Size(48, 21);
             this.tipoLB.TabIndex = 17;
             this.tipoLB.Text = "Tipo:";
+            this.tipoLB.Visible = false;
             // 
             // caloriasLB
             // 
             this.caloriasLB.AutoSize = true;
-            this.caloriasLB.Location = new System.Drawing.Point(1032, 192);
+            this.caloriasLB.BackColor = System.Drawing.Color.White;
+            this.caloriasLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.caloriasLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.caloriasLB.Location = new System.Drawing.Point(909, 195);
             this.caloriasLB.Name = "caloriasLB";
-            this.caloriasLB.Size = new System.Drawing.Size(52, 15);
+            this.caloriasLB.Size = new System.Drawing.Size(75, 21);
             this.caloriasLB.TabIndex = 18;
             this.caloriasLB.Text = "Calorias:";
+            this.caloriasLB.Visible = false;
             // 
             // insrIngredienteBTN
             // 
-            this.insrIngredienteBTN.Location = new System.Drawing.Point(1068, 244);
+            this.insrIngredienteBTN.BackColor = System.Drawing.Color.White;
+            this.insrIngredienteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.insrIngredienteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.insrIngredienteBTN.Location = new System.Drawing.Point(945, 247);
             this.insrIngredienteBTN.Name = "insrIngredienteBTN";
-            this.insrIngredienteBTN.Size = new System.Drawing.Size(97, 23);
+            this.insrIngredienteBTN.Size = new System.Drawing.Size(112, 40);
             this.insrIngredienteBTN.TabIndex = 30;
             this.insrIngredienteBTN.Text = "Inserir";
-            this.insrIngredienteBTN.UseVisualStyleBackColor = true;
+            this.insrIngredienteBTN.UseVisualStyleBackColor = false;
+            this.insrIngredienteBTN.Visible = false;
             this.insrIngredienteBTN.Click += new System.EventHandler(this.insrIngredienteBTN_Click);
             // 
             // uppIngredienteBTN
             // 
-            this.uppIngredienteBTN.Location = new System.Drawing.Point(12, 285);
+            this.uppIngredienteBTN.BackColor = System.Drawing.Color.White;
+            this.uppIngredienteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uppIngredienteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.uppIngredienteBTN.Location = new System.Drawing.Point(32, 300);
             this.uppIngredienteBTN.Name = "uppIngredienteBTN";
-            this.uppIngredienteBTN.Size = new System.Drawing.Size(143, 50);
+            this.uppIngredienteBTN.Size = new System.Drawing.Size(112, 40);
             this.uppIngredienteBTN.TabIndex = 33;
             this.uppIngredienteBTN.Text = "Atualizar Ingrediente";
-            this.uppIngredienteBTN.UseVisualStyleBackColor = true;
+            this.uppIngredienteBTN.UseVisualStyleBackColor = false;
             this.uppIngredienteBTN.Click += new System.EventHandler(this.uppIngredienteBTN_Click);
             // 
             // uppBTN
             // 
+            this.uppBTN.BackColor = System.Drawing.Color.White;
+            this.uppBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uppBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.uppBTN.Location = new System.Drawing.Point(348, 484);
             this.uppBTN.Name = "uppBTN";
-            this.uppBTN.Size = new System.Drawing.Size(106, 33);
+            this.uppBTN.Size = new System.Drawing.Size(112, 40);
             this.uppBTN.TabIndex = 34;
             this.uppBTN.Text = "Atualizar";
-            this.uppBTN.UseVisualStyleBackColor = true;
+            this.uppBTN.UseVisualStyleBackColor = false;
+            this.uppBTN.Visible = false;
             this.uppBTN.Click += new System.EventHandler(this.uppBTN_Click);
             // 
             // eliminarIngredienteBTN
             // 
-            this.eliminarIngredienteBTN.Location = new System.Drawing.Point(12, 373);
+            this.eliminarIngredienteBTN.BackColor = System.Drawing.Color.White;
+            this.eliminarIngredienteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.eliminarIngredienteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.eliminarIngredienteBTN.Location = new System.Drawing.Point(32, 364);
             this.eliminarIngredienteBTN.Name = "eliminarIngredienteBTN";
-            this.eliminarIngredienteBTN.Size = new System.Drawing.Size(143, 50);
+            this.eliminarIngredienteBTN.Size = new System.Drawing.Size(112, 40);
             this.eliminarIngredienteBTN.TabIndex = 35;
             this.eliminarIngredienteBTN.Text = "Eliminar Ingrediente";
-            this.eliminarIngredienteBTN.UseVisualStyleBackColor = true;
+            this.eliminarIngredienteBTN.UseVisualStyleBackColor = false;
             this.eliminarIngredienteBTN.Click += new System.EventHandler(this.eliminarReceitaBTN_Click);
             // 
             // deleteBTN
             // 
+            this.deleteBTN.BackColor = System.Drawing.Color.White;
+            this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.deleteBTN.Location = new System.Drawing.Point(476, 484);
             this.deleteBTN.Name = "deleteBTN";
-            this.deleteBTN.Size = new System.Drawing.Size(106, 33);
+            this.deleteBTN.Size = new System.Drawing.Size(112, 40);
             this.deleteBTN.TabIndex = 36;
             this.deleteBTN.Text = "Eliminar";
-            this.deleteBTN.UseVisualStyleBackColor = true;
+            this.deleteBTN.UseVisualStyleBackColor = false;
+            this.deleteBTN.Visible = false;
             this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
             // 
             // sairBTN
             // 
-            this.sairBTN.Location = new System.Drawing.Point(12, 456);
+            this.sairBTN.BackColor = System.Drawing.Color.White;
+            this.sairBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sairBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.sairBTN.Location = new System.Drawing.Point(32, 477);
             this.sairBTN.Name = "sairBTN";
-            this.sairBTN.Size = new System.Drawing.Size(143, 50);
+            this.sairBTN.Size = new System.Drawing.Size(112, 40);
             this.sairBTN.TabIndex = 37;
             this.sairBTN.Text = "Sair";
-            this.sairBTN.UseVisualStyleBackColor = true;
+            this.sairBTN.UseVisualStyleBackColor = false;
             this.sairBTN.Click += new System.EventHandler(this.sairBTN_Click);
+            // 
+            // detalhesIngredienteList
+            // 
+            this.detalhesIngredienteList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detalhesIngredienteList.Location = new System.Drawing.Point(348, 23);
+            this.detalhesIngredienteList.Name = "detalhesIngredienteList";
+            this.detalhesIngredienteList.RowTemplate.Height = 25;
+            this.detalhesIngredienteList.Size = new System.Drawing.Size(483, 379);
+            this.detalhesIngredienteList.TabIndex = 38;
+            this.detalhesIngredienteList.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
             // 
             // IngredientesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1243, 556);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.detalhesIngredienteList);
             this.Controls.Add(this.sairBTN);
             this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.eliminarIngredienteBTN);
@@ -266,11 +331,13 @@ namespace Client
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.detalhesIngredienteBtn);
-            this.Controls.Add(this.detalhesIngredienteList);
             this.Controls.Add(this.mostrarIngredienteList);
             this.Controls.Add(this.button1);
             this.Name = "IngredientesMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngredientesMenu";
+            ((System.ComponentModel.ISupportInitialize)(this.detalhesIngredienteList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,7 +347,6 @@ namespace Client
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox mostrarIngredienteList;
-        private System.Windows.Forms.ListBox detalhesIngredienteList;
         private System.Windows.Forms.Button detalhesIngredienteBtn;
         private System.Windows.Forms.Button validarBtn;
         private System.Windows.Forms.Label infoLabel;
@@ -298,5 +364,7 @@ namespace Client
         private System.Windows.Forms.Button eliminarIngredienteBTN;
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button sairBTN;
+        private System.Windows.Forms.DataGridView detalhesIngredienteList;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -20,7 +20,6 @@ namespace Client
         {
             InitializeComponent();
             saveData(token_param, obj, url_param, user_type_param);
-            label1.Text = user_type;
 
         }
 
@@ -50,6 +49,11 @@ namespace Client
             CervejaMenu cervejaMenu = new CervejaMenu(this, token, url, user_type);
             cervejaMenu.Show();
             this.Hide();
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

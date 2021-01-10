@@ -41,7 +41,7 @@ namespace Client
 
             uri = new StringBuilder();
             uri.Append(url);
-            uri.Replace("[FUNCAO]", "beers/chicken");
+            uri.Replace("[FUNCAO]", "beers/");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             //request.ContentType = "application/x-www-form-urlencoded";
             request.Headers.Add("x-access-token", token);
@@ -59,10 +59,10 @@ namespace Client
 
 
 
-                Beer.Root deserialize = JsonSerializer.Deserialize<Beer.Root>(reader.ReadToEnd());
+                BeerAll.Root deserialize = JsonSerializer.Deserialize<BeerAll.Root>(reader.ReadToEnd());
 
 
-                tabelaCerveja.DataSource = deserialize.beers.beer_info;
+                tabelaCerveja.DataSource = deserialize.results;
             }
         }
 
@@ -70,6 +70,124 @@ namespace Client
         {
             this.Close();
             menu.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabelaCerveja.Visible = true;
+            infoLabel.Visible = true;
+            infoTextBox.Visible = true;
+            validarBtn.Visible = true;
+        }
+
+        private void validarBtn_Click(object sender, EventArgs e)
+        {
+
+
+
+            StringBuilder uri;
+
+
+            uri = new StringBuilder();
+            uri.Append(url);
+            uri.Replace("[FUNCAO]", "beers/" + infoTextBox.Text);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
+            //request.ContentType = "application/x-www-form-urlencoded";
+            request.Headers.Add("x-access-token", token);
+            request.Method = "GET";
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    string message = String.Format("GET falhou. Recebido HTTP {0}", response.StatusCode);
+                    throw new ApplicationException(message);
+                }
+
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+
+
+                Beer.RootBeerDetail deserialize = JsonSerializer.Deserialize<Beer.RootBeerDetail>(reader.ReadToEnd());
+
+
+                tabelaCerveja.DataSource = deserialize.results;
+            }
+        }
+
+        private void cervejaAleatoriaBTN_Click(object sender, EventArgs e)
+        {
+            tabelaCerveja.Visible = true;
+
+            StringBuilder uri;
+
+
+            uri = new StringBuilder();
+            uri.Append(url);
+            uri.Replace("[FUNCAO]", "beers/random");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
+            //request.ContentType = "application/x-www-form-urlencoded";
+            request.Headers.Add("x-access-token", token);
+            request.Method = "GET";
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    string message = String.Format("GET falhou. Recebido HTTP {0}", response.StatusCode);
+                    throw new ApplicationException(message);
+                }
+
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+
+
+                Beer.RootBeerRandom deserialize = JsonSerializer.Deserialize<Beer.RootBeerRandom>(reader.ReadToEnd());
+
+
+                tabelaCerveja.DataSource = deserialize.results;
+
+            }
+        }
+
+        private void cervejaRecBTN_Click(object sender, EventArgs e)
+        {
+            infoTextBox.Visible = true;
+        }
+
+        private void pesquisarBTN_Click(object sender, EventArgs e)
+        {
+            tabelaCerveja.Visible = true;
+
+            StringBuilder uri;
+
+
+            uri = new StringBuilder();
+            uri.Append(url);
+            uri.Replace("[FUNCAO]", "beers/" + infoTextBox.Text);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
+            //request.ContentType = "application/x-www-form-urlencoded";
+            request.Headers.Add("x-access-token", token);
+            request.Method = "GET";
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    string message = String.Format("GET falhou. Recebido HTTP {0}", response.StatusCode);
+                    throw new ApplicationException(message);
+                }
+
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+
+
+                Beer.RootRecomended deserialize = JsonSerializer.Deserialize<Beer.RootRecomended>(reader.ReadToEnd());
+
+
+                tabelaCerveja.DataSource = deserialize.beers.beer_info;
+
+            }
         }
     }
 }

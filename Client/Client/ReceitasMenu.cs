@@ -35,6 +35,9 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = false;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
             infoTextBox.Clear();
             mostrarReceitasList.Visible = true;
             detalhesReceitaList.Visible = false;
@@ -42,8 +45,41 @@ namespace Client
             infoTextBox.Visible = false;
             validarBtn.Visible = false;
             mostrarReceitasList.Items.Clear();
-            detalhesReceitaList.Items.Clear();
+            insrReceitaBTN.Visible = false;
 
+            titleTB.Visible = false;
+            titleTB.Clear();
+            tituloLB.Visible = false;
+            idIngredLB.Visible = false;
+            iDIngredTB.Visible = false;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = false;
+            amountTB.Visible = false;
+            amountTB.Clear();
+            instrucoesLB.Visible = false;
+            instrucoesTB.Visible = false;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            fibrasLB.Visible = false;
+            fiberTB.Visible = false;
+            fiberTB.Clear();
+            proteinaLB.Visible = false;
+            proteinTB.Visible = false;
+            proteinTB.Clear();
+            fatLB.Visible = false;
+            fatTB.Visible = false;
+            fatTB.Clear();
+            carbsLB.Visible = false;
+            carbsTB.Visible = false;
+            carbsTB.Clear();
+            urlImgLB.Visible = false;
+            urlImgTB.Visible = false;
+            urlImgTB.Clear();
+            descricaoLB.Visible = false;
+            descricaoTB.Visible = false;
+            descricaoTB.Clear();
 
             StringBuilder uri;
 
@@ -89,6 +125,7 @@ namespace Client
             {
                 int index = mostrarReceitasList.SelectedIndex;
                 detalhesReceitaList.Visible = true;
+                ingredientesTabela.Visible = true;
                 infoLabel.Visible = true;
                 infoTextBox.Visible = true;
                 validarBtn.Visible = true;
@@ -138,20 +175,18 @@ namespace Client
 
 
                 RecipeInfo.Root deserialize = JsonSerializer.Deserialize<RecipeInfo.Root>(reader.ReadToEnd());
-                
-                detalhesReceitaList.Items.Add(deserialize.recipe[0].title);
-                detalhesReceitaList.Items.Add(deserialize.recipe[0].instructions);
 
-                foreach(RecipeInfo.Ingredient x in deserialize.recipe[1].ingredients)
-                {
-                    detalhesReceitaList.Items.Add(x.name);
-                }
+                detalhesReceitaList.DataSource = deserialize.recipe;
+                ingredientesTabela.DataSource = deserialize.recipe[1].ingredients;
 
             }
         }
 
         private void detalhesReceitaBtn_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = true;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
             detalhesReceitaList.Visible = true;
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
@@ -159,11 +194,47 @@ namespace Client
             mostrarReceitasList.Visible = false;
             infoTextBox.Clear();
             mostrarReceitasList.Items.Clear();
-            detalhesReceitaList.Items.Clear();
+            insrReceitaBTN.Visible = false;
+            titleTB.Visible = false;
+            titleTB.Clear();
+            tituloLB.Visible = false;
+            idIngredLB.Visible = false;
+            iDIngredTB.Visible = false;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = false;
+            amountTB.Visible = false;
+            amountTB.Clear();
+            instrucoesLB.Visible = false;
+            instrucoesTB.Visible = false;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            fibrasLB.Visible = false;
+            fiberTB.Visible = false;
+            fiberTB.Clear();
+            proteinaLB.Visible = false;
+            proteinTB.Visible = false;
+            proteinTB.Clear();
+            fatLB.Visible = false;
+            fatTB.Visible = false;
+            fatTB.Clear();
+            carbsLB.Visible = false;
+            carbsTB.Visible = false;
+            carbsTB.Clear();
+            urlImgLB.Visible = false;
+            urlImgTB.Visible = false;
+            urlImgTB.Clear();
+            descricaoLB.Visible = false;
+            descricaoTB.Visible = false;
+            descricaoTB.Clear();
         }
 
         private void receitaAleatoriaBtn_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = false; 
+            uppBTN.Visible = false;
+            deleteBTN.Visible = false;
             detalhesReceitaList.Visible = false;
             infoLabel.Visible = false;
             infoTextBox.Visible = false;
@@ -171,7 +242,41 @@ namespace Client
             mostrarReceitasList.Visible = true;
             infoTextBox.Clear();
             mostrarReceitasList.Items.Clear();
-            detalhesReceitaList.Items.Clear();
+            insrReceitaBTN.Visible = false;
+            titleTB.Visible = false;
+            titleTB.Clear();
+            tituloLB.Visible = false;
+            idIngredLB.Visible = false;
+            iDIngredTB.Visible = false;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = false;
+            amountTB.Visible = false;
+            amountTB.Clear();
+            instrucoesLB.Visible = false;
+            instrucoesTB.Visible = false;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            fibrasLB.Visible = false;
+            fiberTB.Visible = false;
+            fiberTB.Clear();
+            proteinaLB.Visible = false;
+            proteinTB.Visible = false;
+            proteinTB.Clear();
+            fatLB.Visible = false;
+            fatTB.Visible = false;
+            fatTB.Clear();
+            carbsLB.Visible = false;
+            carbsTB.Visible = false;
+            carbsTB.Clear();
+            urlImgLB.Visible = false;
+            urlImgTB.Visible = false;
+            urlImgTB.Clear();
+            descricaoLB.Visible = false;
+            descricaoTB.Visible = false;
+            descricaoTB.Clear();
+
 
             StringBuilder uri;
 
@@ -261,19 +366,10 @@ namespace Client
         private void button2_Click(object sender, EventArgs e)
         {
             inserReceita newRec = new inserReceita();
-            //newRec.title = null;
-            //newRec.id = null;
-            //newRec.amount = null;
-            //newRec.calories = null;
-            //newRec.fiber = null;
-            //newRec.protein = null;
-            //newRec.fat = null;
-            //newRec.carbs = null;
-            //newRec.url_image = null;
-            //newRec.visible = null;
-            //newRec.description = null;
-            
-        
+            string s;
+
+
+
         string jsonString;
 
             StringBuilder uri;
@@ -284,21 +380,72 @@ namespace Client
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             request.Headers.Add("x-access-token", token);
 
+            if (titleTB.Text == "")
+                newRec.title = null;
+            else
+                newRec.title = titleTB.Text;
+            if (iDIngredTB.Text == "")
+                newRec.id = null;
+            else
+            {
+                s = iDIngredTB.Text;
+                newRec.id = Array.ConvertAll(s.Split(','), int.Parse);
+            }
+            
+            
 
-            newRec.title = titleTB.Text;
-            //string s = iDIngredTB.Text;
-            //newRec.id = Array.ConvertAll(s.Split(','), int.Parse);
-            //s = amountTB.Text;
-            //newRec.amount = Array.ConvertAll(s.Split(','), int.Parse);
-            //newRec.instructions = instrucoesTB.Text;
-            //newRec.calories = Int32.Parse(caloriasTB.Text);
-            //newRec.fiber = Int32.Parse(fiberTB.Text);
-            //newRec.protein = Int32.Parse(proteinTB.Text);
-            //newRec.fat = Int32.Parse(fatTB.Text);
-            //newRec.carbs = Int32.Parse(carbsTB.Text);
-            //newRec.url_image = urlImgTB.Text;
-            //newRec.visible = "1";
-            //newRec.description = descricaoTB.Text;
+            if(amountTB.Text=="")
+            {
+                newRec.amount = null;
+            }
+            else
+            {
+                s = amountTB.Text;
+                newRec.amount = Array.ConvertAll(s.Split(','), int.Parse);
+            }
+
+            if (instrucoesTB.Text == "")
+                newRec.instructions = null;
+            else
+                newRec.instructions = instrucoesTB.Text;
+
+            if (caloriasTB.Text == "")
+                newRec.calories = 0;
+            else
+                newRec.calories = Int32.Parse(caloriasTB.Text);
+
+            if (fiberTB.Text == "")
+                newRec.fiber = 0;
+            else
+                newRec.fiber = Int32.Parse(fiberTB.Text);
+
+            if (proteinTB.Text == "")
+                newRec.protein = 0;
+            else
+                newRec.protein = Int32.Parse(proteinTB.Text);
+
+            if (fatTB.Text == "")
+                newRec.fat = 0;
+            else
+                newRec.fat = Int32.Parse(fatTB.Text);
+
+            if (carbsTB.Text == "")
+                newRec.carbs = 0;
+            else
+                newRec.carbs = Int32.Parse(carbsTB.Text);
+
+            if (urlImgTB.Text == "")
+                newRec.url_image = null;
+            else
+                newRec.url_image = urlImgTB.Text;
+
+            newRec.visible = "1";
+
+            if (descricaoTB.Text == "")
+                newRec.description = null;
+            else
+                newRec.description = descricaoTB.Text;
+
 
             jsonString = JsonSerializer.Serialize<inserReceita>(newRec);
             byte[] postBytes = Encoding.UTF8.GetBytes(jsonString);
@@ -326,19 +473,145 @@ namespace Client
 
         private void uppReceitaBTN_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = false; 
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
+
+            uppBTN.Visible = true;
+            insrReceitaBTN.Visible = false;
+            deleteBTN.Visible = false;
+            insrReceitaBTN.Visible = false;
+            infoTextBox.Clear();
+            mostrarReceitasList.Visible = false;
+            detalhesReceitaList.Visible = false;
+            validarBtn.Visible = false;
+            mostrarReceitasList.Items.Clear();
+            titleTB.Visible = true;
+            titleTB.Clear();
+            tituloLB.Visible = true;
+            idIngredLB.Visible = true;
+            iDIngredTB.Visible = true;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = true;
+            amountTB.Visible = true;
+            amountTB.Clear();
+            instrucoesLB.Visible = true;
+            instrucoesTB.Visible = true;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = true;
+            caloriasTB.Visible = true;
+            caloriasTB.Clear();
+            fibrasLB.Visible = true;
+            fiberTB.Visible = true;
+            fiberTB.Clear();
+            proteinaLB.Visible = true;
+            proteinTB.Visible = true;
+            proteinTB.Clear();
+            fatLB.Visible = true;
+            fatTB.Visible = true;
+            fatTB.Clear();
+            carbsLB.Visible = true;
+            carbsTB.Visible = true;
+            carbsTB.Clear();
+            urlImgLB.Visible = true;
+            urlImgTB.Visible = true;
+            urlImgTB.Clear();
+            descricaoLB.Visible = true;
+            descricaoTB.Visible = true;
+            descricaoTB.Clear();
         }
 
         private void inserReceitaBtn_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = false; 
+            uppBTN.Visible = false;
+            insrReceitaBTN.Visible = false;
+            deleteBTN.Visible = false;
+            insrReceitaBTN.Visible = true;
+            infoTextBox.Clear();
+            mostrarReceitasList.Visible = false;
+            detalhesReceitaList.Visible = false;
+            infoLabel.Visible = false;
+            infoTextBox.Visible = false;
+            validarBtn.Visible = false;
+            mostrarReceitasList.Items.Clear();
+            titleTB.Visible = true;
+            titleTB.Clear();
+            tituloLB.Visible = true;
+            idIngredLB.Visible = true;
+            iDIngredTB.Visible = true;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = true;
+            amountTB.Visible = true;
+            amountTB.Clear();
+            instrucoesLB.Visible = true;
+            instrucoesTB.Visible = true;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = true;
+            caloriasTB.Visible = true;
+            caloriasTB.Clear();
+            fibrasLB.Visible = true;
+            fiberTB.Visible = true;
+            fiberTB.Clear();
+            proteinaLB.Visible = true;
+            proteinTB.Visible = true;
+            proteinTB.Clear();
+            fatLB.Visible = true;
+            fatTB.Visible = true;
+            fatTB.Clear();
+            carbsLB.Visible = true;
+            carbsTB.Visible = true;
+            carbsTB.Clear();
+            urlImgLB.Visible = true;
+            urlImgTB.Visible = true;
+            urlImgTB.Clear();
+            descricaoLB.Visible = true;
+            descricaoTB.Visible = true;
+            descricaoTB.Clear();
 
         }
 
         private void eliminarReceitaBTN_Click(object sender, EventArgs e)
         {
+            ingredientesTabela.Visible = false; 
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
+            uppBTN.Visible = false;
+            deleteBTN.Visible = true;
+            insrReceitaBTN.Visible = false;
+            titleTB.Visible = false;
+            titleTB.Clear();
+            tituloLB.Visible = false;
+            idIngredLB.Visible = false;
+            iDIngredTB.Visible = false;
+            iDIngredTB.Clear();
+            idIngredientesLB.Visible = false;
+            amountTB.Visible = false;
+            amountTB.Clear();
+            instrucoesLB.Visible = false;
+            instrucoesTB.Visible = false;
+            instrucoesTB.Clear();
+            caloriasLB.Visible = false;
+            caloriasTB.Visible = false;
+            caloriasTB.Clear();
+            fibrasLB.Visible = false;
+            fiberTB.Visible = false;
+            fiberTB.Clear();
+            proteinaLB.Visible = false;
+            proteinTB.Visible = false;
+            proteinTB.Clear();
+            fatLB.Visible = false;
+            fatTB.Visible = false;
+            fatTB.Clear();
+            carbsLB.Visible = false;
+            carbsTB.Visible = false;
+            carbsTB.Clear();
+            urlImgLB.Visible = false;
+            urlImgTB.Visible = false;
+            urlImgTB.Clear();
+            descricaoLB.Visible = false;
+            descricaoTB.Visible = false;
+            descricaoTB.Clear();
 
         }
 
