@@ -50,7 +50,7 @@ namespace Client
             this.mostrarCervejaBTN.BackColor = System.Drawing.Color.White;
             this.mostrarCervejaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mostrarCervejaBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.mostrarCervejaBTN.Location = new System.Drawing.Point(12, 166);
+            this.mostrarCervejaBTN.Location = new System.Drawing.Point(34, 143);
             this.mostrarCervejaBTN.Name = "mostrarCervejaBTN";
             this.mostrarCervejaBTN.Size = new System.Drawing.Size(112, 40);
             this.mostrarCervejaBTN.TabIndex = 1;
@@ -61,10 +61,10 @@ namespace Client
             // tabelaCerveja
             // 
             this.tabelaCerveja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaCerveja.Location = new System.Drawing.Point(256, 31);
+            this.tabelaCerveja.Location = new System.Drawing.Point(246, 143);
             this.tabelaCerveja.Name = "tabelaCerveja";
             this.tabelaCerveja.RowTemplate.Height = 25;
-            this.tabelaCerveja.Size = new System.Drawing.Size(886, 469);
+            this.tabelaCerveja.Size = new System.Drawing.Size(752, 323);
             this.tabelaCerveja.TabIndex = 2;
             this.tabelaCerveja.Visible = false;
             // 
@@ -73,7 +73,7 @@ namespace Client
             this.sairBTN.BackColor = System.Drawing.Color.White;
             this.sairBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sairBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.sairBTN.Location = new System.Drawing.Point(12, 560);
+            this.sairBTN.Location = new System.Drawing.Point(34, 537);
             this.sairBTN.Name = "sairBTN";
             this.sairBTN.Size = new System.Drawing.Size(112, 40);
             this.sairBTN.TabIndex = 38;
@@ -86,7 +86,7 @@ namespace Client
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Location = new System.Drawing.Point(12, 261);
+            this.button1.Location = new System.Drawing.Point(34, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 40);
             this.button1.TabIndex = 39;
@@ -99,11 +99,11 @@ namespace Client
             this.validarBtn.BackColor = System.Drawing.Color.White;
             this.validarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.validarBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.validarBtn.Location = new System.Drawing.Point(365, 526);
+            this.validarBtn.Location = new System.Drawing.Point(408, 493);
             this.validarBtn.Name = "validarBtn";
             this.validarBtn.Size = new System.Drawing.Size(112, 40);
             this.validarBtn.TabIndex = 42;
-            this.validarBtn.Text = "Validar";
+            this.validarBtn.Text = "Pesquisar";
             this.validarBtn.UseVisualStyleBackColor = false;
             this.validarBtn.Visible = false;
             this.validarBtn.Click += new System.EventHandler(this.validarBtn_Click);
@@ -114,7 +114,7 @@ namespace Client
             this.infoLabel.BackColor = System.Drawing.Color.White;
             this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.infoLabel.Location = new System.Drawing.Point(261, 526);
+            this.infoLabel.Location = new System.Drawing.Point(246, 504);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(26, 17);
             this.infoLabel.TabIndex = 41;
@@ -123,7 +123,7 @@ namespace Client
             // 
             // infoTextBox
             // 
-            this.infoTextBox.Location = new System.Drawing.Point(288, 523);
+            this.infoTextBox.Location = new System.Drawing.Point(332, 493);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
             this.infoTextBox.Size = new System.Drawing.Size(58, 36);
@@ -136,7 +136,7 @@ namespace Client
             this.cervejaAleatoriaBTN.BackColor = System.Drawing.Color.White;
             this.cervejaAleatoriaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cervejaAleatoriaBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.cervejaAleatoriaBTN.Location = new System.Drawing.Point(12, 351);
+            this.cervejaAleatoriaBTN.Location = new System.Drawing.Point(34, 328);
             this.cervejaAleatoriaBTN.Name = "cervejaAleatoriaBTN";
             this.cervejaAleatoriaBTN.Size = new System.Drawing.Size(112, 40);
             this.cervejaAleatoriaBTN.TabIndex = 43;
@@ -149,7 +149,7 @@ namespace Client
             this.cervejaRecBTN.BackColor = System.Drawing.Color.White;
             this.cervejaRecBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cervejaRecBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.cervejaRecBTN.Location = new System.Drawing.Point(12, 442);
+            this.cervejaRecBTN.Location = new System.Drawing.Point(34, 419);
             this.cervejaRecBTN.Name = "cervejaRecBTN";
             this.cervejaRecBTN.Size = new System.Drawing.Size(112, 40);
             this.cervejaRecBTN.TabIndex = 44;
@@ -162,12 +162,13 @@ namespace Client
             this.pesquisarBTN.BackColor = System.Drawing.Color.White;
             this.pesquisarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.pesquisarBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.pesquisarBTN.Location = new System.Drawing.Point(343, 587);
+            this.pesquisarBTN.Location = new System.Drawing.Point(408, 493);
             this.pesquisarBTN.Name = "pesquisarBTN";
             this.pesquisarBTN.Size = new System.Drawing.Size(112, 40);
             this.pesquisarBTN.TabIndex = 45;
             this.pesquisarBTN.Text = "Pesquisar";
             this.pesquisarBTN.UseVisualStyleBackColor = false;
+            this.pesquisarBTN.Visible = false;
             this.pesquisarBTN.Click += new System.EventHandler(this.pesquisarBTN_Click);
             // 
             // pictureBox1

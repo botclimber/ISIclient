@@ -39,6 +39,7 @@ namespace Client
         {
             mostrarIngredienteList.Items.Clear();
             mostrarIngredienteList.Visible = true;
+            
 
             infoLabel.Visible = false;
             infoTextBox.Visible = false;
@@ -98,6 +99,7 @@ namespace Client
         private void detalhesIngredienteBtn_Click(object sender, EventArgs e)
         {
             detalhesIngredienteList.Visible = true;
+            detalhesIngredienteList.Items.Clear();
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
             validarBtn.Visible = true;
@@ -123,6 +125,7 @@ namespace Client
         private void mostrarIngredienteList_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = mostrarIngredienteList.SelectedIndex;
+            detalhesIngredienteList.Items.Clear();
             detalhesIngredienteList.Visible = true;
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
@@ -134,6 +137,7 @@ namespace Client
 
         private void validarBtn_Click(object sender, EventArgs e)
         {
+            detalhesIngredienteList.Items.Clear();
             StringBuilder uri;
 
 
@@ -159,9 +163,19 @@ namespace Client
 
 
                 IngredientsInfo.Root deserialize = JsonSerializer.Deserialize<IngredientsInfo.Root>(reader.ReadToEnd());
-                int i = 0;
                 IngredientsInfo.Ingredient aux = deserialize.content[0].ingredient;
-                detalhesIngredienteList.DataSource = aux;
+
+                var receitasstring =new System.Text.StringBuilder();
+
+                foreach (IngredientsInfo.Recipe x in deserialize.content[0].recipes)
+                    receitasstring.Append(x.title + ", ");
+
+                detalhesIngredienteList.Items.Add("Nome: " + aux.name);
+                detalhesIngredienteList.Items.Add("Tipo: " + aux.type);
+                detalhesIngredienteList.Items.Add("Calorias: " + aux.calories);
+                detalhesIngredienteList.Items.Add("Receitas: " + receitasstring);
+
+                detalhesIngredienteList.Text = aux.ToString();
                 //foreach (IngredientsInfo.Content x in deserialize.content)
                 //{
                 //    if (i == 1)
@@ -254,13 +268,38 @@ namespace Client
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             request.Headers.Add("x-access-token", token);
 
+            if(nomeTB.Text == "")
+            {
+                nomeTB.Text = null;
+            }
+            else
+            {
+                newRec.nome_ingredient = nomeTB.Text;
+            }
 
-            //newRec.nome_ingredient = nomeTB.Text;
-            newRec.calories = Int32.Parse(caloriasTB.Text);
+            if (tipoTB.Text == "")
+            {
+                tipoTB.Text = null;
+            }
+            else
+            {
+                newRec.type = tipoTB.Text;
+            }
+
+            if (caloriasTB.Text == "")
+            {
+                caloriasTB.Text = null;
+            }
+            else
+            {
+                newRec.calories = Int32.Parse(caloriasTB.Text);
+            }
+
+            
+            
            
 
             jsonString = JsonSerializer.Serialize<inserIngrediente>(newRec);
-            MessageBox.Show(jsonString);
             byte[] postBytes = Encoding.UTF8.GetBytes(jsonString);
 
             request.Method = "PUT";
@@ -304,7 +343,7 @@ namespace Client
             caloriasTB.Clear();
             detalhesIngredienteList.Visible = false;
             uppBTN.Visible = false;
-            deleteBTN.Visible = false;
+            deleteBTN.Visible = true; 
             validarBtn.Visible = false;
 
 

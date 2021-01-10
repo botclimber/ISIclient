@@ -32,6 +32,12 @@ namespace Client
 
         private void mostrarCervejaBTN_Click(object sender, EventArgs e)
         {
+            validarBtn.Visible = false;
+            pesquisarBTN.Visible = false;
+            infoTextBox.Visible = false;
+            infoLabel.Visible = false;
+
+
             tabelaCerveja.Visible = true;
 
 
@@ -74,10 +80,15 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            infoTextBox.Clear();
             tabelaCerveja.Visible = true;
+            infoLabel.Text = "ID:";
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
             validarBtn.Visible = true;
+            pesquisarBTN.Visible = false;
+
+
         }
 
         private void validarBtn_Click(object sender, EventArgs e)
@@ -119,6 +130,11 @@ namespace Client
         {
             tabelaCerveja.Visible = true;
 
+            validarBtn.Visible = false;
+            pesquisarBTN.Visible = false;
+            infoTextBox.Visible = false;
+            infoLabel.Visible = false;
+
             StringBuilder uri;
 
 
@@ -153,6 +169,13 @@ namespace Client
         private void cervejaRecBTN_Click(object sender, EventArgs e)
         {
             infoTextBox.Visible = true;
+
+            validarBtn.Visible = false;
+            pesquisarBTN.Visible = true;
+            infoTextBox.Visible = true;
+            infoTextBox.Clear();
+            infoLabel.Visible = true;
+            infoLabel.Text = "Proteina:";
         }
 
         private void pesquisarBTN_Click(object sender, EventArgs e)

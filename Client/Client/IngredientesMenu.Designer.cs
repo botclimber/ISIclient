@@ -49,9 +49,8 @@ namespace Client
             this.eliminarIngredienteBTN = new System.Windows.Forms.Button();
             this.deleteBTN = new System.Windows.Forms.Button();
             this.sairBTN = new System.Windows.Forms.Button();
-            this.detalhesIngredienteList = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.detalhesIngredienteList)).BeginInit();
+            this.detalhesIngredienteList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +71,7 @@ namespace Client
             // 
             this.mostrarIngredienteList.FormattingEnabled = true;
             this.mostrarIngredienteList.ItemHeight = 15;
-            this.mostrarIngredienteList.Location = new System.Drawing.Point(348, 23);
+            this.mostrarIngredienteList.Location = new System.Drawing.Point(266, 99);
             this.mostrarIngredienteList.Name = "mostrarIngredienteList";
             this.mostrarIngredienteList.Size = new System.Drawing.Size(483, 379);
             this.mostrarIngredienteList.TabIndex = 2;
@@ -97,7 +96,7 @@ namespace Client
             this.validarBtn.BackColor = System.Drawing.Color.White;
             this.validarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.validarBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.validarBtn.Location = new System.Drawing.Point(441, 428);
+            this.validarBtn.Location = new System.Drawing.Point(369, 516);
             this.validarBtn.Name = "validarBtn";
             this.validarBtn.Size = new System.Drawing.Size(112, 40);
             this.validarBtn.TabIndex = 11;
@@ -112,7 +111,7 @@ namespace Client
             this.infoLabel.BackColor = System.Drawing.Color.White;
             this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.infoLabel.Location = new System.Drawing.Point(359, 431);
+            this.infoLabel.Location = new System.Drawing.Point(267, 527);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(26, 17);
             this.infoLabel.TabIndex = 10;
@@ -121,7 +120,7 @@ namespace Client
             // 
             // infoTextBox
             // 
-            this.infoTextBox.Location = new System.Drawing.Point(386, 428);
+            this.infoTextBox.Location = new System.Drawing.Point(305, 516);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
             this.infoTextBox.Size = new System.Drawing.Size(58, 36);
@@ -144,7 +143,7 @@ namespace Client
             // 
             // nomeTB
             // 
-            this.nomeTB.Location = new System.Drawing.Point(991, 71);
+            this.nomeTB.Location = new System.Drawing.Point(348, 202);
             this.nomeTB.Name = "nomeTB";
             this.nomeTB.Size = new System.Drawing.Size(192, 23);
             this.nomeTB.TabIndex = 13;
@@ -152,7 +151,7 @@ namespace Client
             // 
             // tipoTB
             // 
-            this.tipoTB.Location = new System.Drawing.Point(991, 129);
+            this.tipoTB.Location = new System.Drawing.Point(348, 260);
             this.tipoTB.Name = "tipoTB";
             this.tipoTB.Size = new System.Drawing.Size(192, 23);
             this.tipoTB.TabIndex = 14;
@@ -160,7 +159,7 @@ namespace Client
             // 
             // caloriasTB
             // 
-            this.caloriasTB.Location = new System.Drawing.Point(991, 195);
+            this.caloriasTB.Location = new System.Drawing.Point(348, 326);
             this.caloriasTB.Name = "caloriasTB";
             this.caloriasTB.Size = new System.Drawing.Size(192, 23);
             this.caloriasTB.TabIndex = 15;
@@ -172,7 +171,7 @@ namespace Client
             this.nomeLB.BackColor = System.Drawing.Color.White;
             this.nomeLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.nomeLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.nomeLB.Location = new System.Drawing.Point(909, 71);
+            this.nomeLB.Location = new System.Drawing.Point(266, 202);
             this.nomeLB.Name = "nomeLB";
             this.nomeLB.Size = new System.Drawing.Size(57, 21);
             this.nomeLB.TabIndex = 16;
@@ -185,7 +184,7 @@ namespace Client
             this.tipoLB.BackColor = System.Drawing.Color.White;
             this.tipoLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tipoLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.tipoLB.Location = new System.Drawing.Point(909, 134);
+            this.tipoLB.Location = new System.Drawing.Point(266, 265);
             this.tipoLB.Name = "tipoLB";
             this.tipoLB.Size = new System.Drawing.Size(48, 21);
             this.tipoLB.TabIndex = 17;
@@ -198,7 +197,7 @@ namespace Client
             this.caloriasLB.BackColor = System.Drawing.Color.White;
             this.caloriasLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.caloriasLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.caloriasLB.Location = new System.Drawing.Point(909, 195);
+            this.caloriasLB.Location = new System.Drawing.Point(266, 326);
             this.caloriasLB.Name = "caloriasLB";
             this.caloriasLB.Size = new System.Drawing.Size(75, 21);
             this.caloriasLB.TabIndex = 18;
@@ -210,7 +209,7 @@ namespace Client
             this.insrIngredienteBTN.BackColor = System.Drawing.Color.White;
             this.insrIngredienteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.insrIngredienteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.insrIngredienteBTN.Location = new System.Drawing.Point(945, 247);
+            this.insrIngredienteBTN.Location = new System.Drawing.Point(369, 516);
             this.insrIngredienteBTN.Name = "insrIngredienteBTN";
             this.insrIngredienteBTN.Size = new System.Drawing.Size(112, 40);
             this.insrIngredienteBTN.TabIndex = 30;
@@ -237,7 +236,7 @@ namespace Client
             this.uppBTN.BackColor = System.Drawing.Color.White;
             this.uppBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.uppBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.uppBTN.Location = new System.Drawing.Point(348, 484);
+            this.uppBTN.Location = new System.Drawing.Point(369, 516);
             this.uppBTN.Name = "uppBTN";
             this.uppBTN.Size = new System.Drawing.Size(112, 40);
             this.uppBTN.TabIndex = 34;
@@ -264,7 +263,7 @@ namespace Client
             this.deleteBTN.BackColor = System.Drawing.Color.White;
             this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.deleteBTN.Location = new System.Drawing.Point(476, 484);
+            this.deleteBTN.Location = new System.Drawing.Point(369, 516);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(112, 40);
             this.deleteBTN.TabIndex = 36;
@@ -278,23 +277,13 @@ namespace Client
             this.sairBTN.BackColor = System.Drawing.Color.White;
             this.sairBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sairBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.sairBTN.Location = new System.Drawing.Point(32, 477);
+            this.sairBTN.Location = new System.Drawing.Point(32, 527);
             this.sairBTN.Name = "sairBTN";
             this.sairBTN.Size = new System.Drawing.Size(112, 40);
             this.sairBTN.TabIndex = 37;
             this.sairBTN.Text = "Sair";
             this.sairBTN.UseVisualStyleBackColor = false;
             this.sairBTN.Click += new System.EventHandler(this.sairBTN_Click);
-            // 
-            // detalhesIngredienteList
-            // 
-            this.detalhesIngredienteList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detalhesIngredienteList.Location = new System.Drawing.Point(348, 23);
-            this.detalhesIngredienteList.Name = "detalhesIngredienteList";
-            this.detalhesIngredienteList.RowTemplate.Height = 25;
-            this.detalhesIngredienteList.Size = new System.Drawing.Size(483, 379);
-            this.detalhesIngredienteList.TabIndex = 38;
-            this.detalhesIngredienteList.Visible = false;
             // 
             // pictureBox1
             // 
@@ -306,14 +295,24 @@ namespace Client
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
+            // detalhesIngredienteList
+            // 
+            this.detalhesIngredienteList.FormattingEnabled = true;
+            this.detalhesIngredienteList.ItemHeight = 15;
+            this.detalhesIngredienteList.Location = new System.Drawing.Point(267, 99);
+            this.detalhesIngredienteList.Name = "detalhesIngredienteList";
+            this.detalhesIngredienteList.Size = new System.Drawing.Size(482, 379);
+            this.detalhesIngredienteList.TabIndex = 40;
+            this.detalhesIngredienteList.Visible = false;
+            // 
             // IngredientesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1243, 556);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(861, 601);
             this.Controls.Add(this.detalhesIngredienteList);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sairBTN);
             this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.eliminarIngredienteBTN);
@@ -336,7 +335,6 @@ namespace Client
             this.Name = "IngredientesMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngredientesMenu";
-            ((System.ComponentModel.ISupportInitialize)(this.detalhesIngredienteList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -364,7 +362,7 @@ namespace Client
         private System.Windows.Forms.Button eliminarIngredienteBTN;
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button sairBTN;
-        private System.Windows.Forms.DataGridView detalhesIngredienteList;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox detalhesIngredienteList;
     }
 }
