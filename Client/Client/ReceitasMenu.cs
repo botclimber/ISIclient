@@ -93,7 +93,7 @@ namespace Client
             request.Method = "GET";
 
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)  
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -287,6 +287,7 @@ namespace Client
             uri.Replace("[FUNCAO]", "rand_recipes/");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             request.Headers.Add("x-access-token", token);
+            request.Method = "GET";
 
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
@@ -384,6 +385,7 @@ namespace Client
                 newRec.title = null;
             else
                 newRec.title = titleTB.Text;
+
             if (iDIngredTB.Text == "")
                 newRec.id = null;
             else

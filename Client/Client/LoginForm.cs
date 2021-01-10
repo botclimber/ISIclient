@@ -180,7 +180,7 @@ namespace Client
             }
             else
             {
-                MessageBox.Show("Ocorreu um erro! Tente de novo!");
+                MessageBox.Show("Ocorreu um erro no Registo! Tente de novo!");
             }
             }
             else

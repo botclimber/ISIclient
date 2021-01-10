@@ -479,7 +479,7 @@ namespace Client
             this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deleteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.deleteBTN.Location = new System.Drawing.Point(517, 26);
+            this.deleteBTN.Location = new System.Drawing.Point(457, 26);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(112, 36);
             this.deleteBTN.TabIndex = 35;
