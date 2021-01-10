@@ -9,7 +9,7 @@ namespace Client
 {
     public partial class LoginForm : Form
     {
-        public string url = "http://127.0.0.1:5000/api/v1/[FUNCAO]";
+        public string url = "http://quickrecipe.azurewebsites.net/api/v1/[FUNCAO]";
         public LoginForm()
         {
             InitializeComponent();

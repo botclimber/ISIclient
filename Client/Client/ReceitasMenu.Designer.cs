@@ -66,37 +66,49 @@ namespace Client
             this.eliminarReceitaBTN = new System.Windows.Forms.Button();
             this.deleteBTN = new System.Windows.Forms.Button();
             this.sairBTN = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.detalhesReceitaList = new System.Windows.Forms.DataGridView();
             this.ingredientesTabela = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.destaque2 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.detalhesReceitaList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientesTabela)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Location = new System.Drawing.Point(34, 95);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 102);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 40);
+            this.button1.Size = new System.Drawing.Size(220, 75);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Mostrar Receitas";
+            this.button1.Text = "Ver";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // detalhesReceitaBtn
             // 
-            this.detalhesReceitaBtn.BackColor = System.Drawing.Color.White;
-            this.detalhesReceitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.detalhesReceitaBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.detalhesReceitaBtn.Location = new System.Drawing.Point(34, 164);
+            this.detalhesReceitaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.detalhesReceitaBtn.FlatAppearance.BorderSize = 0;
+            this.detalhesReceitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.detalhesReceitaBtn.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.detalhesReceitaBtn.ForeColor = System.Drawing.Color.White;
+            this.detalhesReceitaBtn.Image = ((System.Drawing.Image)(resources.GetObject("detalhesReceitaBtn.Image")));
+            this.detalhesReceitaBtn.Location = new System.Drawing.Point(0, 177);
             this.detalhesReceitaBtn.Name = "detalhesReceitaBtn";
-            this.detalhesReceitaBtn.Size = new System.Drawing.Size(112, 40);
+            this.detalhesReceitaBtn.Size = new System.Drawing.Size(220, 75);
             this.detalhesReceitaBtn.TabIndex = 2;
-            this.detalhesReceitaBtn.Text = "Detalhes de Receita";
+            this.detalhesReceitaBtn.Text = "Detalhes";
+            this.detalhesReceitaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.detalhesReceitaBtn.UseVisualStyleBackColor = false;
             this.detalhesReceitaBtn.Click += new System.EventHandler(this.detalhesReceitaBtn_Click);
             // 
@@ -113,23 +125,24 @@ namespace Client
             // infoLabel
             // 
             this.infoLabel.AutoSize = true;
-            this.infoLabel.BackColor = System.Drawing.Color.White;
-            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.infoLabel.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.infoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.infoLabel.Font = new System.Drawing.Font("Inter", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoLabel.ForeColor = System.Drawing.Color.White;
             this.infoLabel.Location = new System.Drawing.Point(364, 35);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(26, 17);
+            this.infoLabel.Size = new System.Drawing.Size(21, 13);
             this.infoLabel.TabIndex = 4;
             this.infoLabel.Text = "ID:";
             this.infoLabel.Visible = false;
             // 
             // validarBtn
             // 
-            this.validarBtn.BackColor = System.Drawing.Color.White;
-            this.validarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.validarBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.validarBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.validarBtn.Location = new System.Drawing.Point(457, 26);
+            this.validarBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.validarBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.validarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.validarBtn.Font = new System.Drawing.Font("Inter", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.validarBtn.ForeColor = System.Drawing.Color.White;
+            this.validarBtn.Location = new System.Drawing.Point(466, 26);
             this.validarBtn.Name = "validarBtn";
             this.validarBtn.Size = new System.Drawing.Size(112, 36);
             this.validarBtn.TabIndex = 5;
@@ -140,6 +153,7 @@ namespace Client
             // 
             // mostrarReceitasList
             // 
+            this.mostrarReceitasList.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.mostrarReceitasList.FormattingEnabled = true;
             this.mostrarReceitasList.ItemHeight = 15;
             this.mostrarReceitasList.Location = new System.Drawing.Point(364, 86);
@@ -151,27 +165,35 @@ namespace Client
             // 
             // receitaAleatoriaBtn
             // 
-            this.receitaAleatoriaBtn.BackColor = System.Drawing.Color.White;
-            this.receitaAleatoriaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.receitaAleatoriaBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.receitaAleatoriaBtn.Location = new System.Drawing.Point(34, 232);
+            this.receitaAleatoriaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.receitaAleatoriaBtn.FlatAppearance.BorderSize = 0;
+            this.receitaAleatoriaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.receitaAleatoriaBtn.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.receitaAleatoriaBtn.ForeColor = System.Drawing.Color.White;
+            this.receitaAleatoriaBtn.Image = ((System.Drawing.Image)(resources.GetObject("receitaAleatoriaBtn.Image")));
+            this.receitaAleatoriaBtn.Location = new System.Drawing.Point(0, 252);
             this.receitaAleatoriaBtn.Name = "receitaAleatoriaBtn";
-            this.receitaAleatoriaBtn.Size = new System.Drawing.Size(112, 40);
+            this.receitaAleatoriaBtn.Size = new System.Drawing.Size(220, 75);
             this.receitaAleatoriaBtn.TabIndex = 7;
             this.receitaAleatoriaBtn.Text = "Receita Aleatória";
+            this.receitaAleatoriaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.receitaAleatoriaBtn.UseVisualStyleBackColor = false;
             this.receitaAleatoriaBtn.Click += new System.EventHandler(this.receitaAleatoriaBtn_Click);
             // 
             // inserReceitaBtn
             // 
-            this.inserReceitaBtn.BackColor = System.Drawing.Color.White;
-            this.inserReceitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.inserReceitaBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.inserReceitaBtn.Location = new System.Drawing.Point(34, 300);
+            this.inserReceitaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.inserReceitaBtn.FlatAppearance.BorderSize = 0;
+            this.inserReceitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inserReceitaBtn.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inserReceitaBtn.ForeColor = System.Drawing.Color.White;
+            this.inserReceitaBtn.Image = ((System.Drawing.Image)(resources.GetObject("inserReceitaBtn.Image")));
+            this.inserReceitaBtn.Location = new System.Drawing.Point(0, 327);
             this.inserReceitaBtn.Name = "inserReceitaBtn";
-            this.inserReceitaBtn.Size = new System.Drawing.Size(112, 40);
+            this.inserReceitaBtn.Size = new System.Drawing.Size(220, 75);
             this.inserReceitaBtn.TabIndex = 8;
-            this.inserReceitaBtn.Text = "Inserir Receita";
+            this.inserReceitaBtn.Text = "Inserir";
+            this.inserReceitaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.inserReceitaBtn.UseVisualStyleBackColor = false;
             this.inserReceitaBtn.Click += new System.EventHandler(this.inserReceitaBtn_Click);
             // 
@@ -268,12 +290,12 @@ namespace Client
             // tituloLB
             // 
             this.tituloLB.AutoSize = true;
-            this.tituloLB.BackColor = System.Drawing.Color.White;
-            this.tituloLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tituloLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.tituloLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.tituloLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tituloLB.ForeColor = System.Drawing.Color.White;
             this.tituloLB.Location = new System.Drawing.Point(392, 86);
             this.tituloLB.Name = "tituloLB";
-            this.tituloLB.Size = new System.Drawing.Size(59, 21);
+            this.tituloLB.Size = new System.Drawing.Size(57, 19);
             this.tituloLB.TabIndex = 19;
             this.tituloLB.Text = "Titulo:";
             this.tituloLB.Visible = false;
@@ -281,12 +303,12 @@ namespace Client
             // idIngredientesLB
             // 
             this.idIngredientesLB.AutoSize = true;
-            this.idIngredientesLB.BackColor = System.Drawing.Color.White;
-            this.idIngredientesLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.idIngredientesLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.idIngredientesLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.idIngredientesLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.idIngredientesLB.ForeColor = System.Drawing.Color.White;
             this.idIngredientesLB.Location = new System.Drawing.Point(247, 151);
             this.idIngredientesLB.Name = "idIngredientesLB";
-            this.idIngredientesLB.Size = new System.Drawing.Size(204, 21);
+            this.idIngredientesLB.Size = new System.Drawing.Size(195, 19);
             this.idIngredientesLB.TabIndex = 20;
             this.idIngredientesLB.Text = "Quantidade Ingredientes:";
             this.idIngredientesLB.Visible = false;
@@ -294,12 +316,12 @@ namespace Client
             // instrucoesLB
             // 
             this.instrucoesLB.AutoSize = true;
-            this.instrucoesLB.BackColor = System.Drawing.Color.White;
-            this.instrucoesLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.instrucoesLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.instrucoesLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.instrucoesLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.instrucoesLB.ForeColor = System.Drawing.Color.White;
             this.instrucoesLB.Location = new System.Drawing.Point(359, 190);
             this.instrucoesLB.Name = "instrucoesLB";
-            this.instrucoesLB.Size = new System.Drawing.Size(92, 21);
+            this.instrucoesLB.Size = new System.Drawing.Size(95, 19);
             this.instrucoesLB.TabIndex = 21;
             this.instrucoesLB.Text = "Instruções:";
             this.instrucoesLB.Visible = false;
@@ -307,12 +329,12 @@ namespace Client
             // caloriasLB
             // 
             this.caloriasLB.AutoSize = true;
-            this.caloriasLB.BackColor = System.Drawing.Color.White;
-            this.caloriasLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.caloriasLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.caloriasLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.caloriasLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.caloriasLB.ForeColor = System.Drawing.Color.White;
             this.caloriasLB.Location = new System.Drawing.Point(376, 230);
             this.caloriasLB.Name = "caloriasLB";
-            this.caloriasLB.Size = new System.Drawing.Size(75, 21);
+            this.caloriasLB.Size = new System.Drawing.Size(77, 19);
             this.caloriasLB.TabIndex = 22;
             this.caloriasLB.Text = "Calorias:";
             this.caloriasLB.Visible = false;
@@ -320,12 +342,12 @@ namespace Client
             // fibrasLB
             // 
             this.fibrasLB.AutoSize = true;
-            this.fibrasLB.BackColor = System.Drawing.Color.White;
-            this.fibrasLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.fibrasLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.fibrasLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.fibrasLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fibrasLB.ForeColor = System.Drawing.Color.White;
             this.fibrasLB.Location = new System.Drawing.Point(392, 268);
             this.fibrasLB.Name = "fibrasLB";
-            this.fibrasLB.Size = new System.Drawing.Size(59, 21);
+            this.fibrasLB.Size = new System.Drawing.Size(62, 19);
             this.fibrasLB.TabIndex = 23;
             this.fibrasLB.Text = "Fibras:";
             this.fibrasLB.Visible = false;
@@ -333,12 +355,12 @@ namespace Client
             // proteinaLB
             // 
             this.proteinaLB.AutoSize = true;
-            this.proteinaLB.BackColor = System.Drawing.Color.White;
-            this.proteinaLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.proteinaLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.proteinaLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.proteinaLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.proteinaLB.ForeColor = System.Drawing.Color.White;
             this.proteinaLB.Location = new System.Drawing.Point(372, 307);
             this.proteinaLB.Name = "proteinaLB";
-            this.proteinaLB.Size = new System.Drawing.Size(79, 21);
+            this.proteinaLB.Size = new System.Drawing.Size(78, 19);
             this.proteinaLB.TabIndex = 24;
             this.proteinaLB.Text = "Proteina:";
             this.proteinaLB.Visible = false;
@@ -346,12 +368,12 @@ namespace Client
             // fatLB
             // 
             this.fatLB.AutoSize = true;
-            this.fatLB.BackColor = System.Drawing.Color.White;
-            this.fatLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.fatLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.fatLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.fatLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fatLB.ForeColor = System.Drawing.Color.White;
             this.fatLB.Location = new System.Drawing.Point(375, 346);
             this.fatLB.Name = "fatLB";
-            this.fatLB.Size = new System.Drawing.Size(76, 21);
+            this.fatLB.Size = new System.Drawing.Size(76, 19);
             this.fatLB.TabIndex = 25;
             this.fatLB.Text = "Gordura:";
             this.fatLB.Visible = false;
@@ -359,12 +381,12 @@ namespace Client
             // carbsLB
             // 
             this.carbsLB.AutoSize = true;
-            this.carbsLB.BackColor = System.Drawing.Color.White;
-            this.carbsLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.carbsLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.carbsLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.carbsLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.carbsLB.ForeColor = System.Drawing.Color.White;
             this.carbsLB.Location = new System.Drawing.Point(280, 384);
             this.carbsLB.Name = "carbsLB";
-            this.carbsLB.Size = new System.Drawing.Size(171, 21);
+            this.carbsLB.Size = new System.Drawing.Size(171, 19);
             this.carbsLB.TabIndex = 26;
             this.carbsLB.Text = "Hidratos de Carbono:";
             this.carbsLB.Visible = false;
@@ -372,12 +394,12 @@ namespace Client
             // urlImgLB
             // 
             this.urlImgLB.AutoSize = true;
-            this.urlImgLB.BackColor = System.Drawing.Color.White;
-            this.urlImgLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.urlImgLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.urlImgLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.urlImgLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.urlImgLB.ForeColor = System.Drawing.Color.White;
             this.urlImgLB.Location = new System.Drawing.Point(382, 425);
             this.urlImgLB.Name = "urlImgLB";
-            this.urlImgLB.Size = new System.Drawing.Size(69, 21);
+            this.urlImgLB.Size = new System.Drawing.Size(65, 19);
             this.urlImgLB.TabIndex = 27;
             this.urlImgLB.Text = "url Img:";
             this.urlImgLB.Visible = false;
@@ -385,23 +407,24 @@ namespace Client
             // descricaoLB
             // 
             this.descricaoLB.AutoSize = true;
-            this.descricaoLB.BackColor = System.Drawing.Color.White;
-            this.descricaoLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.descricaoLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.descricaoLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.descricaoLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.descricaoLB.ForeColor = System.Drawing.Color.White;
             this.descricaoLB.Location = new System.Drawing.Point(363, 465);
             this.descricaoLB.Name = "descricaoLB";
-            this.descricaoLB.Size = new System.Drawing.Size(88, 21);
+            this.descricaoLB.Size = new System.Drawing.Size(91, 19);
             this.descricaoLB.TabIndex = 28;
             this.descricaoLB.Text = "Descricao:";
             this.descricaoLB.Visible = false;
             // 
             // insrReceitaBTN
             // 
-            this.insrReceitaBTN.BackColor = System.Drawing.Color.White;
-            this.insrReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.insrReceitaBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.insrReceitaBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.insrReceitaBTN.Location = new System.Drawing.Point(559, 516);
+            this.insrReceitaBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.insrReceitaBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.insrReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insrReceitaBTN.Font = new System.Drawing.Font("Inter", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.insrReceitaBTN.ForeColor = System.Drawing.Color.White;
+            this.insrReceitaBTN.Location = new System.Drawing.Point(559, 520);
             this.insrReceitaBTN.Name = "insrReceitaBTN";
             this.insrReceitaBTN.Size = new System.Drawing.Size(112, 36);
             this.insrReceitaBTN.TabIndex = 29;
@@ -422,36 +445,41 @@ namespace Client
             // idIngredLB
             // 
             this.idIngredLB.AutoSize = true;
-            this.idIngredLB.BackColor = System.Drawing.Color.White;
-            this.idIngredLB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.idIngredLB.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.idIngredLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.idIngredLB.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.idIngredLB.ForeColor = System.Drawing.Color.White;
             this.idIngredLB.Location = new System.Drawing.Point(322, 115);
             this.idIngredLB.Name = "idIngredLB";
-            this.idIngredLB.Size = new System.Drawing.Size(129, 21);
+            this.idIngredLB.Size = new System.Drawing.Size(123, 19);
             this.idIngredLB.TabIndex = 31;
             this.idIngredLB.Text = "Id Ingredientes:";
             this.idIngredLB.Visible = false;
             // 
             // uppReceitaBTN
             // 
-            this.uppReceitaBTN.BackColor = System.Drawing.Color.White;
-            this.uppReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.uppReceitaBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.uppReceitaBTN.Location = new System.Drawing.Point(34, 371);
+            this.uppReceitaBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.uppReceitaBTN.FlatAppearance.BorderSize = 0;
+            this.uppReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uppReceitaBTN.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uppReceitaBTN.ForeColor = System.Drawing.Color.White;
+            this.uppReceitaBTN.Image = ((System.Drawing.Image)(resources.GetObject("uppReceitaBTN.Image")));
+            this.uppReceitaBTN.Location = new System.Drawing.Point(0, 402);
             this.uppReceitaBTN.Name = "uppReceitaBTN";
-            this.uppReceitaBTN.Size = new System.Drawing.Size(112, 40);
+            this.uppReceitaBTN.Size = new System.Drawing.Size(220, 75);
             this.uppReceitaBTN.TabIndex = 32;
-            this.uppReceitaBTN.Text = "Atualizar Receita";
+            this.uppReceitaBTN.Text = "Editar";
+            this.uppReceitaBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.uppReceitaBTN.UseVisualStyleBackColor = false;
             this.uppReceitaBTN.Click += new System.EventHandler(this.uppReceitaBTN_Click);
             // 
             // uppBTN
             // 
-            this.uppBTN.BackColor = System.Drawing.Color.White;
-            this.uppBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.uppBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uppBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.uppBTN.Location = new System.Drawing.Point(559, 516);
+            this.uppBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.uppBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.uppBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uppBTN.Font = new System.Drawing.Font("Inter", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.uppBTN.ForeColor = System.Drawing.Color.White;
+            this.uppBTN.Location = new System.Drawing.Point(559, 520);
             this.uppBTN.Name = "uppBTN";
             this.uppBTN.Size = new System.Drawing.Size(112, 36);
             this.uppBTN.TabIndex = 33;
@@ -462,24 +490,29 @@ namespace Client
             // 
             // eliminarReceitaBTN
             // 
-            this.eliminarReceitaBTN.BackColor = System.Drawing.Color.White;
-            this.eliminarReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.eliminarReceitaBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.eliminarReceitaBTN.Location = new System.Drawing.Point(34, 443);
+            this.eliminarReceitaBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.eliminarReceitaBTN.FlatAppearance.BorderSize = 0;
+            this.eliminarReceitaBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarReceitaBTN.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.eliminarReceitaBTN.ForeColor = System.Drawing.Color.White;
+            this.eliminarReceitaBTN.Image = ((System.Drawing.Image)(resources.GetObject("eliminarReceitaBTN.Image")));
+            this.eliminarReceitaBTN.Location = new System.Drawing.Point(0, 477);
             this.eliminarReceitaBTN.Name = "eliminarReceitaBTN";
-            this.eliminarReceitaBTN.Size = new System.Drawing.Size(112, 40);
+            this.eliminarReceitaBTN.Size = new System.Drawing.Size(220, 75);
             this.eliminarReceitaBTN.TabIndex = 34;
             this.eliminarReceitaBTN.Text = "Eliminar Receita";
+            this.eliminarReceitaBTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.eliminarReceitaBTN.UseVisualStyleBackColor = false;
             this.eliminarReceitaBTN.Click += new System.EventHandler(this.eliminarReceitaBTN_Click);
             // 
             // deleteBTN
             // 
-            this.deleteBTN.BackColor = System.Drawing.Color.White;
-            this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.deleteBTN.Location = new System.Drawing.Point(457, 26);
+            this.deleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.deleteBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.deleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBTN.Font = new System.Drawing.Font("Inter", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.deleteBTN.ForeColor = System.Drawing.Color.White;
+            this.deleteBTN.Location = new System.Drawing.Point(466, 26);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(112, 36);
             this.deleteBTN.TabIndex = 35;
@@ -490,31 +523,23 @@ namespace Client
             // 
             // sairBTN
             // 
-            this.sairBTN.BackColor = System.Drawing.Color.White;
-            this.sairBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sairBTN.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.sairBTN.Location = new System.Drawing.Point(34, 512);
+            this.sairBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.sairBTN.FlatAppearance.BorderSize = 0;
+            this.sairBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sairBTN.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sairBTN.ForeColor = System.Drawing.Color.White;
+            this.sairBTN.Image = ((System.Drawing.Image)(resources.GetObject("sairBTN.Image")));
+            this.sairBTN.Location = new System.Drawing.Point(0, 552);
             this.sairBTN.Name = "sairBTN";
-            this.sairBTN.Size = new System.Drawing.Size(112, 40);
+            this.sairBTN.Size = new System.Drawing.Size(220, 100);
             this.sairBTN.TabIndex = 36;
-            this.sairBTN.Text = "Sair";
             this.sairBTN.UseVisualStyleBackColor = false;
             this.sairBTN.Click += new System.EventHandler(this.sairBTN_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
             // 
             // detalhesReceitaList
             // 
             this.detalhesReceitaList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detalhesReceitaList.Location = new System.Drawing.Point(364, 86);
+            this.detalhesReceitaList.Location = new System.Drawing.Point(364, 87);
             this.detalhesReceitaList.Name = "detalhesReceitaList";
             this.detalhesReceitaList.RowTemplate.Height = 25;
             this.detalhesReceitaList.Size = new System.Drawing.Size(483, 100);
@@ -524,27 +549,69 @@ namespace Client
             // ingredientesTabela
             // 
             this.ingredientesTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ingredientesTabela.Location = new System.Drawing.Point(364, 203);
+            this.ingredientesTabela.Location = new System.Drawing.Point(364, 218);
             this.ingredientesTabela.Name = "ingredientesTabela";
             this.ingredientesTabela.RowTemplate.Height = 25;
             this.ingredientesTabela.Size = new System.Drawing.Size(483, 247);
             this.ingredientesTabela.TabIndex = 39;
             this.ingredientesTabela.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.destaque2);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.sairBTN);
+            this.panel1.Controls.Add(this.eliminarReceitaBTN);
+            this.panel1.Controls.Add(this.uppReceitaBTN);
+            this.panel1.Controls.Add(this.inserReceitaBtn);
+            this.panel1.Controls.Add(this.receitaAleatoriaBtn);
+            this.panel1.Controls.Add(this.detalhesReceitaBtn);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 652);
+            this.panel1.TabIndex = 47;
+            // 
+            // destaque2
+            // 
+            this.destaque2.BackColor = System.Drawing.Color.White;
+            this.destaque2.Location = new System.Drawing.Point(213, 102);
+            this.destaque2.Name = "destaque2";
+            this.destaque2.Size = new System.Drawing.Size(7, 75);
+            this.destaque2.TabIndex = 43;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Inter Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "RECEITAS";
+            // 
             // ReceitasMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(890, 573);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(890, 652);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ingredientesTabela);
             this.Controls.Add(this.detalhesReceitaList);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.sairBTN);
             this.Controls.Add(this.deleteBTN);
-            this.Controls.Add(this.eliminarReceitaBTN);
             this.Controls.Add(this.uppBTN);
-            this.Controls.Add(this.uppReceitaBTN);
             this.Controls.Add(this.idIngredLB);
             this.Controls.Add(this.iDIngredTB);
             this.Controls.Add(this.insrReceitaBTN);
@@ -568,20 +635,19 @@ namespace Client
             this.Controls.Add(this.instrucoesTB);
             this.Controls.Add(this.amountTB);
             this.Controls.Add(this.titleTB);
-            this.Controls.Add(this.inserReceitaBtn);
-            this.Controls.Add(this.receitaAleatoriaBtn);
             this.Controls.Add(this.validarBtn);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.infoTextBox);
-            this.Controls.Add(this.detalhesReceitaBtn);
             this.Controls.Add(this.mostrarReceitasList);
-            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReceitasMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Receitas - QuickRecipes";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalhesReceitaList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientesTabela)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,8 +691,11 @@ namespace Client
         private System.Windows.Forms.Button eliminarReceitaBTN;
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button sairBTN;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView detalhesReceitaList;
         private System.Windows.Forms.DataGridView ingredientesTabela;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel destaque2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -35,6 +35,9 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            destaque2.Height = button1.Height;
+            destaque2.Top = button1.Top;
+
             ingredientesTabela.Visible = false;
             uppBTN.Visible = false;
             deleteBTN.Visible = false;
@@ -184,6 +187,9 @@ namespace Client
 
         private void detalhesReceitaBtn_Click(object sender, EventArgs e)
         {
+            destaque2.Height = detalhesReceitaBtn.Height;
+            destaque2.Top = detalhesReceitaBtn.Top;
+
             ingredientesTabela.Visible = true;
             uppBTN.Visible = false;
             deleteBTN.Visible = false;
@@ -232,6 +238,9 @@ namespace Client
 
         private void receitaAleatoriaBtn_Click(object sender, EventArgs e)
         {
+            destaque2.Height = receitaAleatoriaBtn.Height;
+            destaque2.Top = receitaAleatoriaBtn.Top;
+
             ingredientesTabela.Visible = false; 
             uppBTN.Visible = false;
             deleteBTN.Visible = false;
@@ -475,6 +484,9 @@ namespace Client
 
         private void uppReceitaBTN_Click(object sender, EventArgs e)
         {
+            destaque2.Height = uppReceitaBTN.Height;
+            destaque2.Top = uppReceitaBTN.Top;
+
             ingredientesTabela.Visible = false; 
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
@@ -525,6 +537,9 @@ namespace Client
 
         private void inserReceitaBtn_Click(object sender, EventArgs e)
         {
+            destaque2.Height = inserReceitaBtn.Height;
+            destaque2.Top = inserReceitaBtn.Top;
+
             ingredientesTabela.Visible = false; 
             uppBTN.Visible = false;
             insrReceitaBTN.Visible = false;
@@ -575,6 +590,9 @@ namespace Client
 
         private void eliminarReceitaBTN_Click(object sender, EventArgs e)
         {
+            destaque2.Height = eliminarReceitaBTN.Height;
+            destaque2.Top = eliminarReceitaBTN.Top;
+
             ingredientesTabela.Visible = false; 
             infoLabel.Visible = true;
             infoTextBox.Visible = true;

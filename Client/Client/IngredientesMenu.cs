@@ -37,6 +37,9 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            destaque.Height = button1.Height;
+            destaque.Top = button1.Top;
+
             mostrarIngredienteList.Items.Clear();
             mostrarIngredienteList.Visible = true;
             
@@ -98,6 +101,10 @@ namespace Client
 
         private void detalhesIngredienteBtn_Click(object sender, EventArgs e)
         {
+            destaque.Height = detalhesIngredienteBtn.Height;
+            destaque.Top = detalhesIngredienteBtn.Top;
+
+
             detalhesIngredienteList.Visible = true;
             detalhesIngredienteList.Items.Clear();
             infoLabel.Visible = true;
@@ -233,6 +240,9 @@ namespace Client
 
         private void uppIngredienteBTN_Click(object sender, EventArgs e)
         {
+            destaque.Height = uppIngredienteBTN.Height;
+            destaque.Top = uppIngredienteBTN.Top;
+
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
             infoTextBox.Clear();
@@ -325,6 +335,9 @@ namespace Client
 
         private void eliminarReceitaBTN_Click(object sender, EventArgs e)
         {
+            destaque.Height = eliminarIngredienteBTN.Height;
+            destaque.Top = eliminarIngredienteBTN.Top;
+
             infoLabel.Visible = true;
             infoTextBox.Visible = true;
 
@@ -376,12 +389,18 @@ namespace Client
 
         private void sairBTN_Click(object sender, EventArgs e)
         {
+            destaque.Height = sairBTN.Height;
+            destaque.Top = sairBTN.Top;
+
             this.Close();
             menu.Show();
         }
 
         private void inserIngredienteBtn_Click(object sender, EventArgs e)
         {
+            destaque.Height = inserIngredienteBtn.Height;
+            destaque.Top = inserIngredienteBtn.Top;
+
             infoLabel.Visible = false;
             infoTextBox.Visible = false;
             infoTextBox.Clear();

@@ -48,8 +48,8 @@ namespace Client
             this.nameRegistLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.userRegistTextbox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // emailTextbox
@@ -104,13 +104,13 @@ namespace Client
             // passRegistLabel
             // 
             resources.ApplyResources(this.passRegistLabel, "passRegistLabel");
-            this.passRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.passRegistLabel.ForeColor = System.Drawing.Color.White;
             this.passRegistLabel.Name = "passRegistLabel";
             // 
             // userRegistLabel
             // 
             resources.ApplyResources(this.userRegistLabel, "userRegistLabel");
-            this.userRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.userRegistLabel.ForeColor = System.Drawing.Color.White;
             this.userRegistLabel.Name = "userRegistLabel";
             // 
             // passRegistTextbox
@@ -126,7 +126,7 @@ namespace Client
             // confirmPassRegistLabel
             // 
             resources.ApplyResources(this.confirmPassRegistLabel, "confirmPassRegistLabel");
-            this.confirmPassRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.confirmPassRegistLabel.ForeColor = System.Drawing.Color.White;
             this.confirmPassRegistLabel.Name = "confirmPassRegistLabel";
             // 
             // confirmPassRegistTextbox
@@ -155,7 +155,7 @@ namespace Client
             // nameRegistLabel
             // 
             resources.ApplyResources(this.nameRegistLabel, "nameRegistLabel");
-            this.nameRegistLabel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.nameRegistLabel.ForeColor = System.Drawing.Color.White;
             this.nameRegistLabel.Name = "nameRegistLabel";
             // 
             // textBox1
@@ -168,18 +168,25 @@ namespace Client
             resources.ApplyResources(this.userRegistTextbox, "userRegistTextbox");
             this.userRegistTextbox.Name = "userRegistTextbox";
             // 
-            // pictureBox1
+            // label2
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
             // 
             // LoginForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.userRegistTextbox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nameRegistLabel);
@@ -200,7 +207,6 @@ namespace Client
             this.Controls.Add(this.emailTextbox);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +232,8 @@ namespace Client
         private System.Windows.Forms.Label nameRegistLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox userRegistTextbox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

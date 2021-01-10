@@ -32,6 +32,9 @@ namespace Client
 
         private void mostrarCervejaBTN_Click(object sender, EventArgs e)
         {
+            destaque1.Height = mostrarCervejaBTN.Height;
+            destaque1.Top = mostrarCervejaBTN.Top;
+
             validarBtn.Visible = false;
             pesquisarBTN.Visible = false;
             infoTextBox.Visible = false;
@@ -80,6 +83,9 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            destaque1.Height = button1.Height;
+            destaque1.Top = button1.Top;
+
             infoTextBox.Clear();
             tabelaCerveja.Visible = true;
             infoLabel.Text = "ID:";
@@ -128,6 +134,9 @@ namespace Client
 
         private void cervejaAleatoriaBTN_Click(object sender, EventArgs e)
         {
+            destaque1.Height = cervejaAleatoriaBTN.Height;
+            destaque1.Top = cervejaAleatoriaBTN.Top;
+
             tabelaCerveja.Visible = true;
 
             validarBtn.Visible = false;
@@ -168,6 +177,9 @@ namespace Client
 
         private void cervejaRecBTN_Click(object sender, EventArgs e)
         {
+            destaque1.Height = cervejaRecBTN.Height;
+            destaque1.Top = cervejaRecBTN.Top;
+
             infoTextBox.Visible = true;
 
             validarBtn.Visible = false;
