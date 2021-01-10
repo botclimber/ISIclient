@@ -163,7 +163,10 @@ namespace Client
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
             request.Headers.Add("x-access-token", token);
             request.Method = "GET";
+            try
+            {
 
+            
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
             {
                 if (response.StatusCode != HttpStatusCode.OK)
@@ -178,10 +181,24 @@ namespace Client
 
 
                 RecipeInfo.Root deserialize = JsonSerializer.Deserialize<RecipeInfo.Root>(reader.ReadToEnd());
+                if(deserialize.recipe!=null)
+                    {
+                        detalhesReceitaList.DataSource = deserialize.recipe;
+                        ingredientesTabela.DataSource = deserialize.recipe[1].ingredients;
+                    }
+                else
+                    {
+                        MessageBox.Show("Este ID não existe! Tente de novo!");
+                    }
+                
 
-                detalhesReceitaList.DataSource = deserialize.recipe;
-                ingredientesTabela.DataSource = deserialize.recipe[1].ingredients;
 
+            }
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um Erro!\n" + mensage);
+                
             }
         }
 
@@ -362,7 +379,10 @@ namespace Client
             requestStream.Write(postBytes, 0, postBytes.Length);
             requestStream.Close();
 
+            try
+            {
 
+            
             var response = (HttpWebResponse)request.GetResponse();
 
             string result;
@@ -371,6 +391,12 @@ namespace Client
                 result = rdr.ReadToEnd();
             }
             MessageBox.Show(result);
+            }
+            catch (Exception mensage)
+            {
+
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -470,8 +496,11 @@ namespace Client
             // send it
             requestStream.Write(postBytes, 0, postBytes.Length);
             requestStream.Close();
+                        
+            try
+            {
 
-
+            
             var response = (HttpWebResponse)request.GetResponse();
 
             string result;
@@ -480,6 +509,11 @@ namespace Client
                 result = rdr.ReadToEnd();
             }
             MessageBox.Show(result);
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
         }
 
         private void uppReceitaBTN_Click(object sender, EventArgs e)
@@ -648,8 +682,10 @@ namespace Client
            
             request.Method = "DELETE";
 
-            
+            try
+            {
 
+            
             var response = (HttpWebResponse)request.GetResponse();
 
             string result;
@@ -659,7 +695,11 @@ namespace Client
             }
             MessageBox.Show(result);
 
-
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
 
         }
 

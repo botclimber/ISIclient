@@ -87,6 +87,11 @@ namespace Client
             request.Headers.Add("Authorization", "Basic " + encoded);
             
             string result;
+            //Exception mensage = new Exception();
+            try
+            {
+
+            
             var response = (HttpWebResponse)request.GetResponse();
             StreamReader rdr;
             using (rdr = new StreamReader(response.GetResponseStream()))
@@ -108,6 +113,13 @@ namespace Client
                 this.Hide();
 
             }
+            }
+            catch (Exception mensage)
+            {
+                emailTextbox.Clear();
+                passTextbox.Clear();
+                MessageBox.Show("Erro no Login!\n " + mensage.Message);
+            }
         }
 
         private void registarRegistBtn_Click(object sender, EventArgs e)
@@ -115,8 +127,11 @@ namespace Client
             registo newReg = new registo();
             string jsonString;
 
+            try
+            {
 
-            if(passRegistTextbox.Text==confirmPassRegistTextbox.Text)
+            
+            if (passRegistTextbox.Text==confirmPassRegistTextbox.Text)
             { 
 
             StringBuilder uri;
@@ -143,6 +158,7 @@ namespace Client
             requestStream.Write(postBytes, 0, postBytes.Length);
             requestStream.Close();
 
+                
 
             var response = (HttpWebResponse)request.GetResponse();
 
@@ -188,6 +204,12 @@ namespace Client
                 MessageBox.Show("As palavras-chaves não coincidem! Tente de novo!");
                 passRegistTextbox.Clear();
                 confirmPassRegistTextbox.Clear();
+            }
+            }
+            catch (Exception mensage)
+            {
+
+                MessageBox.Show("Erro no Registo!\n " + mensage.Message);
             }
 
         }

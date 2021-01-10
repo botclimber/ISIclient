@@ -109,11 +109,13 @@ namespace Client
             uri.Append(url);
             uri.Replace("[FUNCAO]", "beers/" + infoTextBox.Text);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
-            //request.ContentType = "application/x-www-form-urlencoded";
             request.Headers.Add("x-access-token", token);
             request.Method = "GET";
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            try
+            {
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -129,6 +131,11 @@ namespace Client
 
 
                 tabelaCerveja.DataSource = deserialize.results;
+            }
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
             }
         }
 
@@ -151,11 +158,14 @@ namespace Client
             uri.Append(url);
             uri.Replace("[FUNCAO]", "beers/random");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
-            //request.ContentType = "application/x-www-form-urlencoded";
             request.Headers.Add("x-access-token", token);
             request.Method = "GET";
 
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
+            
+            try
+            {
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)    
             {
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -172,6 +182,11 @@ namespace Client
 
                 tabelaCerveja.DataSource = deserialize.results;
 
+            }
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
             }
         }
 
@@ -201,9 +216,11 @@ namespace Client
             uri.Append(url);
             uri.Replace("[FUNCAO]", "beers/" + infoTextBox.Text);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.ToString());
-            //request.ContentType = "application/x-www-form-urlencoded";
             request.Headers.Add("x-access-token", token);
             request.Method = "GET";
+
+            try
+            {
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
             {
@@ -223,6 +240,15 @@ namespace Client
                 tabelaCerveja.DataSource = deserialize.beers.beer_info;
 
             }
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
         }
+        
+        
+        
+        
     }
 }

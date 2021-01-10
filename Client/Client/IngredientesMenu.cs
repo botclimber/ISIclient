@@ -156,6 +156,11 @@ namespace Client
             request.Headers.Add("x-access-token", token);
             request.Method = "GET";
 
+            try
+            {
+
+            
+
 
             using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)     //via GET
             {
@@ -170,6 +175,8 @@ namespace Client
 
 
                 IngredientsInfo.Root deserialize = JsonSerializer.Deserialize<IngredientsInfo.Root>(reader.ReadToEnd());
+                    if(deserialize.content!= null)
+                    { 
                 IngredientsInfo.Ingredient aux = deserialize.content[0].ingredient;
 
                 var receitasstring =new System.Text.StringBuilder();
@@ -183,16 +190,17 @@ namespace Client
                 detalhesIngredienteList.Items.Add("Receitas: " + receitasstring);
 
                 detalhesIngredienteList.Text = aux.ToString();
-                //foreach (IngredientsInfo.Content x in deserialize.content)
-                //{
-                //    if (i == 1)
-                //        break;
-                //    detalhesIngredienteList.DataSource = deserialize.content.;
-                //    i++;
-                //}
+                    }
+                    else
+                    {
+                        MessageBox.Show("Este ID não existe! Tente de novo!");
+                    }
 
-
-
+                }
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
             }
         }
 
@@ -228,6 +236,11 @@ namespace Client
             requestStream.Close();
 
 
+            try
+            {
+
+            
+
             var response = (HttpWebResponse)request.GetResponse();
 
             string result;
@@ -236,6 +249,12 @@ namespace Client
                 result = rdr.ReadToEnd();
             }
             MessageBox.Show(result);
+
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
         }
 
         private void uppIngredienteBTN_Click(object sender, EventArgs e)
@@ -322,6 +341,10 @@ namespace Client
             requestStream.Write(postBytes, 0, postBytes.Length);
             requestStream.Close();
 
+            try
+            {
+
+            
 
             var response = (HttpWebResponse)request.GetResponse();
 
@@ -331,6 +354,12 @@ namespace Client
                 result = rdr.ReadToEnd();
             }
             MessageBox.Show(result);
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
+
         }
 
         private void eliminarReceitaBTN_Click(object sender, EventArgs e)
@@ -375,7 +404,8 @@ namespace Client
 
             request.Method = "DELETE";
 
-
+            try
+            {
 
             var response = (HttpWebResponse)request.GetResponse();
 
@@ -385,6 +415,11 @@ namespace Client
                 result = rdr.ReadToEnd();
             }
             MessageBox.Show(result);
+            }
+            catch (Exception mensage)
+            {
+                MessageBox.Show("Ocorreu um erro!\n" + mensage);
+            }
         }
 
         private void sairBTN_Click(object sender, EventArgs e)
