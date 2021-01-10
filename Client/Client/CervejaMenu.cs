@@ -187,7 +187,7 @@ namespace Client
             infoTextBox.Visible = true;
             infoTextBox.Clear();
             infoLabel.Visible = true;
-            infoLabel.Text = "Proteina:";
+            infoLabel.Text = "Comida:";
         }
 
         private void pesquisarBTN_Click(object sender, EventArgs e)

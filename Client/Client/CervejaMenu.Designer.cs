@@ -68,6 +68,7 @@ namespace Client
             // 
             // tabelaCerveja
             // 
+            this.tabelaCerveja.BackgroundColor = System.Drawing.Color.White;
             this.tabelaCerveja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaCerveja.Location = new System.Drawing.Point(278, 95);
             this.tabelaCerveja.Name = "tabelaCerveja";
@@ -131,7 +132,7 @@ namespace Client
             this.infoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.infoLabel.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoLabel.ForeColor = System.Drawing.Color.White;
-            this.infoLabel.Location = new System.Drawing.Point(541, 471);
+            this.infoLabel.Location = new System.Drawing.Point(498, 471);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(24, 16);
             this.infoLabel.TabIndex = 41;

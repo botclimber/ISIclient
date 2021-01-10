@@ -153,7 +153,7 @@ namespace Client
             // 
             // mostrarReceitasList
             // 
-            this.mostrarReceitasList.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.mostrarReceitasList.BackColor = System.Drawing.Color.White;
             this.mostrarReceitasList.FormattingEnabled = true;
             this.mostrarReceitasList.ItemHeight = 15;
             this.mostrarReceitasList.Location = new System.Drawing.Point(364, 86);
@@ -538,6 +538,7 @@ namespace Client
             // 
             // detalhesReceitaList
             // 
+            this.detalhesReceitaList.BackgroundColor = System.Drawing.Color.White;
             this.detalhesReceitaList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detalhesReceitaList.Location = new System.Drawing.Point(364, 87);
             this.detalhesReceitaList.Name = "detalhesReceitaList";
@@ -548,8 +549,9 @@ namespace Client
             // 
             // ingredientesTabela
             // 
+            this.ingredientesTabela.BackgroundColor = System.Drawing.Color.White;
             this.ingredientesTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ingredientesTabela.Location = new System.Drawing.Point(364, 218);
+            this.ingredientesTabela.Location = new System.Drawing.Point(363, 218);
             this.ingredientesTabela.Name = "ingredientesTabela";
             this.ingredientesTabela.RowTemplate.Height = 25;
             this.ingredientesTabela.Size = new System.Drawing.Size(483, 247);
